@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(50, 50, 50);
+  /* TODO: font-family: https://fonts.google.com/specimen/Space+Mono */
+}
+
+#home-box {
+  color: white;
+  background-color:rgb(61, 61, 61);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 2%;
+  height: fit-content;
+}
+
+/* .bg-img {
+  filter: blur(5px), grayscale(20%);
+  -webkit-filter: blur(5px) grayscale(20%);
+} */
+
+#home-img {
+  width: 50%;
+  object-fit: cover;
+  object-position: -50% 0;
+}
+
+#intro-text {
+  text-align: center;
+  height: fit-content;
+  padding: 20px;
+}
+
+#intro-text > * {
+  margin: 20px;
+}
