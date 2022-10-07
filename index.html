@@ -14,12 +14,14 @@
       crossorigin="anonymous"
     />
     <!-- Font Awesome Icon Tool Kit -->
-    <script src="https://kit.fontawesome.com/a85b56cfc1.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a85b56cfc1.js"
+      crossorigin="anonymous"
+    ></script>
 
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!-- Navbar -->
     <nav class="navbar navbar-dark">
       <a class="navbar-brand" href="#"> </a>
@@ -47,10 +49,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <div
+        class="collapse navbar-collapse text-center"
+        id="navbarSupportedContent"
+      >
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Work</a>
@@ -75,31 +80,69 @@
           way. Explore my work below, and contact me directly to learn more.
         </p>
         <a href="#" class="btn btn-outline-light rounded-5 disabled">My Work</a>
-        <a href="#" class="btn btn-light rounded-5 disabled">Get in Touch</a>
+        <a href="#contact" class="btn btn-light rounded-5">Get in Touch</a>
       </div>
       <img src="resource/intro_background.jpg" id="home-img" />
     </div>
 
     <!-- About -->
-
-
-    <!-- Contact -->
-    <div id="contact">
+    <div id="about">
       <div class="container">
-          <div class="text-white text-center">
-            <h2>Get in Touch</h2>
-            <p>
-              Located in Singapore <br />
-              Feel free to reach out to me via email or LinkedIn below. 
-            </p>
-            <div class="inline-block">
-              <a href="https://www.linkedin.com/in/jasmine-tan-jm/" target="_blank" class="btn linkedin-btn rounded-5 m-1"> LinkedIn </a>
-              <a href="mailto: jasminetanjm@hotmail.com" class="btn btn-outline-light rounded-5 m-1">Email</a>
-            </div>
+        <div class="row">
+          <div class="col-md-6">
+            <img src="resource/about_me.png" class="img-fluid" />
           </div>
+          <div class="col-md-6 text-white">
+            <h2>About Me</h2>
+            <blockquote class="blockquote fst-italic">
+              <p>A Designer at Heart <i class="fas fa-heart"></i></p>
+            </blockquote>
+            <p>
+              I am software developer and freelance designer based in Singapore.
+              I started my journey as a dreamer who wanted to combine her love
+              for designing and technology together. It was not just the visual
+              side of designing that I was passionate about, but logical side
+              that was needed to design something that brings value to people.
+            </p>
+            <p>
+              I am currently in my final year of studies at Singapore Management
+              University's School of Computing and Information Systems. I come
+              from a background of arts and humanities before university and my
+              experiences have prepared me to think creatively and logically to
+              solve the everyday problems I face today.
+            </p>
+
+          </div>
+        </div>
       </div>
     </div>
 
+    <!-- Contact -->
+    <div id="contact">
+      <div class="container mt-3 m-auto">
+        <div class="text-white text-center">
+          <h2>Get in Touch</h2>
+          <p>
+            Located in Singapore <br />
+            Feel free to reach out to me via email or LinkedIn below.
+          </p>
+          <div class="inline-block">
+            <a
+              href="https://www.linkedin.com/in/jasmine-tan-jm/"
+              target="_blank"
+              class="btn linkedin-btn rounded-5 m-1"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto: jasminetanjm@hotmail.com"
+              class="btn btn-outline-light rounded-5 m-1"
+              >Email</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap CDN JavaScript -->
     <script
@@ -117,5 +160,11 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- External Custom JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
