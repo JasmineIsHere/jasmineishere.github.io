@@ -3,7 +3,7 @@ body {
   /* TODO: font-family: https://fonts.google.com/specimen/Space+Mono */
 }
 
-#home-box {
+#home {
   color: white;
   background-color:rgb(61, 61, 61);
   display: flex;
@@ -34,3 +34,4 @@ body {
 #intro-text > * {
   margin: 20px;
 }
+
