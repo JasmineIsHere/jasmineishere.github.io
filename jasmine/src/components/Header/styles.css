@@ -1,0 +1,15 @@
+/* styles.css */
+
+/* Header container */
+header {
+  padding: 0.5em;
+  display: flex;
+  gap: 2rem;
+  background-color: #ffffff
+}
+
+/* Navigation links */
+a {
+  color: #000000;
+  text-decoration: none;
+}
