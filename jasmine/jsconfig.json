@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "checkJs": true,
+    "noEmit": true,
+    "lib": ["dom", "esnext"]
+  },
+  "include": ["src/**/*"]
+}

@@ -2,14 +2,23 @@
 
 /* Header container */
 header {
-  padding: 0.5em;
+  padding: 1em;
   display: flex;
   gap: 2rem;
-  background-color: #ffffff
+  background-color: #fee4d6;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 /* Navigation links */
 a {
   color: #000000;
   text-decoration: none;
+  transition: 0.1s;
+
+  &:hover {
+    font-weight: bold;
+  }
 }
