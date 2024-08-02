@@ -74,6 +74,7 @@ export const Button = styled.div`
   &:hover {
     background-color: #fff1ea;
   }
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.1);
 `;
 
 export const ButtonsContainer = styled.div`
