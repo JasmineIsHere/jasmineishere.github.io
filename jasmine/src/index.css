@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&display=swap');
 
 body {
   margin: 0;
@@ -12,9 +13,12 @@ body {
   font-size: 1.5rem;
 }
 
-p, h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+h1, h2, h3, h4, h5, h6, ul, ol, li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
-  font-family: "Source Sans 3", sans-serif;
+  /* font-family: "Source Sans 3", sans-serif; */
+  font-family: "Dokdo", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 code {

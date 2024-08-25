@@ -1,13 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import Header from './components/Header'
-import Router from './Router'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Navigation from "./components/Navigation";
+import Router from "./Router";
+import ThemeSwitch from "./components/ThemeSwitch";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <React.StrictMode>
-    <Header />
-    <Router />
+    <ThemeProvider>
+      <Navigation>
+        <ThemeSwitch>
+          <Router />
+        </ThemeSwitch>
+      </Navigation>
+    </ThemeProvider>
   </React.StrictMode>
 );
