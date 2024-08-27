@@ -12,7 +12,7 @@ const Chill = () => {
         grow. When I am not coding, I am just a <Girl>girl</Girl>✨ that wishes
         to be a stone in her next life.
       </Body>
-      <Picture src="/pug_loaf.jpg" alt="pug loaf" />
+      <Picture src="/pug_loaf.jpg" alt="pug loaf"/>
     </ChillContainer>
   );
 };

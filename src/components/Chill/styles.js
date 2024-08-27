@@ -4,7 +4,7 @@ export const ChillContainer = styled.div`
   font-family: "Dokdo", system-ui;
   font-weight: 400;
   font-style: normal;
-  padding: 0 4rem 0 2rem;
+  padding: 0 4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -12,7 +12,7 @@ export const ChillContainer = styled.div`
 
 export const Picture = styled.img`
   object-fit: contain;
-  // max-width: 40%;
+  max-width: 40%;
   @media (max-width: 768px) {
     display: none;
   }

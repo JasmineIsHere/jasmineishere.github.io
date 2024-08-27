@@ -21,8 +21,8 @@ const Work = () => {
   const { theme } = useTheme();
 
   const navigate = useNavigate();
-  const onProjectClick = () => {
-    navigate("/pkCard");    
+  const onProject1Click = () => {
+    navigate("/projects/pkCard");    
   }
   return (
     <WorkContainer>
@@ -36,7 +36,7 @@ const Work = () => {
       </TechStackContainer>
 
       <Heading>Projects</Heading>
-      <ProjectCard $mode={theme} onClick={onProjectClick}>
+      <ProjectCard $mode={theme} onClick={onProject1Click}>
         <img src="/pk_resume.png" alt="Project 1"/>
       </ProjectCard>
     </WorkContainer>

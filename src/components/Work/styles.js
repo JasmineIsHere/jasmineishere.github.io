@@ -5,7 +5,7 @@ export const WorkContainer = styled.div`
   font-family: "Dokdo", system-ui;
   font-weight: 400;
   font-style: normal;
-  padding: 0 2rem;
+  padding: 0 4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
