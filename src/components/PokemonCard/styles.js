@@ -71,6 +71,7 @@ export const CardContainer = styled.div`
       : props.tabIndex === 2
       ? "repeating-linear-gradient(0deg, #ffed84, #ffe872 1.5px, #ffdf65 1px, #ffdd62)"
       : "repeating-linear-gradient(0deg, #dfc4fa, #dfc4fa 1.5px, #c09ce1 1px, #cdadee)"};
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 `;
 
 export const HorizontalContainer = styled.div`
