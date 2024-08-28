@@ -3,6 +3,7 @@ import {
   ButtonsContainer,
   Container,
   DownloadBtn,
+  IconButton,
   NameHeader,
   NavigationButton,
   NavigationContainer,
@@ -30,29 +31,33 @@ const Navigation = ({ children }) => {
           <NavigationLink href="/#/about">Chill</NavigationLink>
         </NavigationButton>
         <ButtonsContainer>
-          <a
-            href="https://www.linkedin.com/in/jasmine-tan-jm/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              src="/linkedin_icon.png"
-              alt="linkedin_profile"
-              width="50rem"
-            />
-          </a>
-          <a href="/Resume.pdf" download>
-            <ResumeBtn
-              src="/resume_icon.png"
-              alt="resume_download"
-              width="50rem"
-            />
-            <DownloadBtn
-              src="/resume_download_icon.png"
-              alt="resume_download"
-              width="50rem"
-            />
-          </a>
+          <IconButton>
+            <a
+              href="https://www.linkedin.com/in/jasmine-tan-jm/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src="/linkedin_icon.png"
+                alt="linkedin_profile"
+                width="50rem"
+              />
+            </a>
+          </IconButton>
+          <IconButton>
+            <a href="/Resume.pdf" download>
+              <ResumeBtn
+                src="/resume_icon.png"
+                alt="resume_download"
+                width="50rem"
+              />
+              <DownloadBtn
+                src="/resume_download_icon.png"
+                alt="resume_download"
+                width="50rem"
+              />
+            </a>
+          </IconButton>
         </ButtonsContainer>
       </NavigationContainer>
       {children}

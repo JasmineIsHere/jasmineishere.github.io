@@ -33,16 +33,17 @@ export const NavigationButton = styled.div`
   padding: 0rem 3rem;
   cursor: pointer;
   width: fit-content;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const NavigationLink = styled.a`
   color: ${colors.text_black};
   text-decoration: none;
-  transition: 0.1s;
-
-  &:hover {
-    font-weight: bold;
-  }
 `;
 
 export const ButtonsContainer = styled.div`
@@ -53,7 +54,6 @@ export const ButtonsContainer = styled.div`
 export const ResumeBtn = styled.img`
   cursor: pointer;
   position: absolute;
-  transition: 0.1s;
 `;
 
 export const DownloadBtn = styled.img`
@@ -68,3 +68,16 @@ export const DownloadBtn = styled.img`
     opacity: 1;
   }
 `;
+
+export const IconButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
+

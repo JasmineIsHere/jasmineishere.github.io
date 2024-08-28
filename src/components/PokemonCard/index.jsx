@@ -32,6 +32,7 @@ import {
   SkillTextFieldContainer,
   AbilityTextField,
   AbilityTextFieldContainer,
+  PageContainer,
 } from "./styles";
 
 const InfoRow = ({ label, value }) => {
@@ -221,6 +222,7 @@ const PokemonCard = () => {
   };
 
   return (
+    <PageContainer>
     <Container>
       <CardContainer tabIndex={currPaginationTab}>
         <HeaderContainer>
@@ -251,6 +253,7 @@ const PokemonCard = () => {
         <TabContent tab={leftPaginationTabs[currPaginationTab - 1]} />
       </CardContainer>
     </Container>
+    </PageContainer>
   );
 };
 

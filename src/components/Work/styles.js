@@ -39,11 +39,17 @@ export const ProjectCard = styled.div`
   box-shadow: ${(props) => props.$mode === "light" ? "0 0 20px 0 rgba(0, 0, 0, 0.5)" : "0 0 10px 0 rgba(255, 255, 255, 0.5)"};
   width: 30rem;
   height: 30rem;
+  transition: transform 0.3s ease;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
   }
 `;
