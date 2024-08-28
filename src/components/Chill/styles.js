@@ -24,15 +24,18 @@ export const Heading = styled.h1`
 
 
 export const Body = styled.div`
+  font-family: "Open Sans", sans-serif;
   font-size: 24px;
   line-height: 1.5;
   font-size: 2rem;
   margin-right: 2rem;
 `;
 
-export const Girl = styled.span`
-  color: #ff8888;
-  font-style: italic;
-  font-weight: bold;
-  font-family: monospace;
+export const StyledText = styled.span`
+  color: ${(props) => props.$color || "inherit"};
+  font-weight: ${(props) => props.$bold ? "bold" : "normal"};
+  font-style: ${(props) => props.$italic ? "italic" : "normal"};
+  text-decoration: ${(props) => props.$underline ? "underline" : "none"};
+  font-size: ${(props) => props.$fontSize || "inherit"};
+  cursor: ${(props) => props.$pointer ? "pointer" : "auto"};
 `;
