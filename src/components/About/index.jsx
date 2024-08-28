@@ -1,13 +1,7 @@
-import React, { useRef, useState } from "react";
-import {
-  Body,
-  Heading,
-  ChillContainer,
-  StyledText,
-  InteractiveText,
-} from "./styles";
+import React, { useState } from "react";
+import { Body, Heading, ChillContainer, StyledText } from "./styles";
 
-const Chill = () => {
+const About = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   const showVideoOnHover = () => {
@@ -30,7 +24,13 @@ const Chill = () => {
           lot more{" "}
           <StyledText $italic $fontSize="1.5rem">
             *cues{" "}
-            <StyledText onMouseOver={showVideoOnHover} $pointer $bold $italic $color='#ff8888'>
+            <StyledText
+              onMouseOver={showVideoOnHover}
+              $pointer
+              $bold
+              $italic
+              $color="#ff8888"
+            >
               Mediocrity City
             </StyledText>
             *
@@ -54,4 +54,4 @@ const Chill = () => {
   );
 };
 
-export default Chill;
+export default About;

@@ -28,7 +28,7 @@ const Navigation = ({ children }) => {
           <NavigationLink href="/">Work</NavigationLink>
         </NavigationButton>
         <NavigationButton>
-          <NavigationLink href="/#/about">Chill</NavigationLink>
+          <NavigationLink href="/#/about">About</NavigationLink>
         </NavigationButton>
         <ButtonsContainer>
           <IconButton>
