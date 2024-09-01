@@ -2,8 +2,15 @@ import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import { colors } from "../../utils/colors";
 import {
+  CardContainer,
   Heading,
+  ProjectBack,
   ProjectCard,
+  ProjectCardsContainer,
+  ProjectImg,
+  SubHeadingContainer,
+  SubHeadingLine,
+  SubHeadingText,
   TechStackButton,
   TechStackContainer,
   WorkContainer,
@@ -21,9 +28,17 @@ const Work = () => {
   const { theme } = useTheme();
 
   const navigate = useNavigate();
-  const onProject1Click = () => {
-    navigate("/projects/pkCard");    
-  }
+  const onProjectClick = (projectPath) => {
+    navigate(`/projects/${projectPath}`);
+  };
+
+  const SubHeading = ({ children }) => (
+    <SubHeadingContainer>
+      <SubHeadingText>{children}</SubHeadingText>
+      <SubHeadingLine $mode={theme} />
+    </SubHeadingContainer>
+  );
+
   return (
     <WorkContainer>
       <Heading>Tech Stack</Heading>
@@ -36,9 +51,52 @@ const Work = () => {
       </TechStackContainer>
 
       <Heading>Projects</Heading>
-      <ProjectCard $mode={theme} onClick={onProject1Click}>
-        <img src="/pk_resume.png" alt="Project 1"/>
-      </ProjectCard>
+      <SubHeading>Ninja Van</SubHeading>
+      <ProjectCardsContainer>
+        <CardContainer>
+          <ProjectCard
+            $mode={theme}
+            onClick={() => onProjectClick("nvSupportPg")}
+          >
+            <ProjectImg
+              src="/nv_support_page_categories.png"
+              alt="Ninja Van Support Page Revamp SS"
+            />
+            <ProjectBack $bgColor={colors.ninjaRed} $color={colors.text_white}>
+              Revamped Ninja Van support page
+            </ProjectBack>
+          </ProjectCard>
+        </CardContainer>
+        <CardContainer>
+          <ProjectCard
+            $mode={theme}
+            onClick={() => onProjectClick("ninjachat")}
+          >
+            <ProjectImg src="/ninjachat.png" alt="NinjaChat SS" />
+            <ProjectBack $bgColor={colors.ninjaRed} $color={colors.text_white}>
+              Implemented new flows for Ninja Chat
+            </ProjectBack>
+          </ProjectCard>
+        </CardContainer>
+        <CardContainer>
+          <ProjectCard
+            $mode={theme}
+            onClick={() => onProjectClick("c2c")}
+          >
+            <ProjectImg src="/ninjachat.png" alt="Consignee to Consignee" />
+            <ProjectBack $bgColor={colors.ninjaRed} $color={colors.text_white}>
+              Kickstarted the proof of concept for Ninja Flexi
+            </ProjectBack>
+          </ProjectCard>
+        </CardContainer>
+      </ProjectCardsContainer>
+      <SubHeading>Personal</SubHeading>
+      {/* <ProjectCard $mode={theme} onClick={() => onProjectClick("pkCard")}>
+        <img src="/pk_resume.png" alt="Pokemon Style Portfolio SS" />
+      </ProjectCard> */}
+
+      <SubHeading>School</SubHeading>
+      {/* TODO */}
     </WorkContainer>
   );
 };

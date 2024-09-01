@@ -11,4 +11,5 @@ export const colors = {
   react: "#A4FBF1",
   mysql: "#6DBDFF",
   others: "#FF9A9A",
+  ninjaRed: "#ee464a",
 };

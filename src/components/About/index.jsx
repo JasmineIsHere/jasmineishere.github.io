@@ -29,7 +29,6 @@ const About = () => {
               $pointer
               $bold
               $italic
-              $color="#ff8888"
             >
               Mediocrity City
             </StyledText>
