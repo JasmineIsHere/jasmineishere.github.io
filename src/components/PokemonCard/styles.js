@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2rem;
-`;
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -47,8 +40,9 @@ export const SelectedPaginationBar = styled.div`
 `;
 
 export const PaginationBarText = styled.div`
-  width: 300px;
+  width: 320px;
   padding: 0 5px;
+  white-space: nowrap;
 `;
 
 export const PaginationDot = styled.div`
@@ -92,6 +86,7 @@ export const LeftProfileContainer = styled.div`
   // border-bottom: 2px solid #636b7e;
   border: 2px solid #636b7e;
   padding: 5px;
+  height: fit-content;
 `;
 
 export const Level = styled.div`
@@ -207,7 +202,6 @@ export const AbilityTextField = styled(TextField)`
 
 export const AbilityTextArea = styled.div`
   background-color: #ffffa5;
-
 `;
 
 export const StyledType = styled.div`
@@ -223,11 +217,16 @@ export const TextAreaContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px 15px;
+  min-height: 158px;
 `;
 
 export const TextArea = styled.div`
-  background-color: ${(props) => props.$backgroundColor || "#fff6ef"};
-  // "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff"};
+  background-color: ${(props) =>
+    props.tabIndex === "1"
+      ? "#fff6ef"
+      : props.tabIndex === "2"
+      ? "#ffffa5"
+      : "#f7ffff"};
   border-radius: 3px;
   color: #3a3939;
   display: flex;
@@ -235,8 +234,16 @@ export const TextArea = styled.div`
   padding: 5px 10px 0;
   position: relative;
   top: -0px;
-  box-shadow: -4px 0 0 -2px ${(props) => props.$backgroundColor || "#fff6ef"}, -8px 0 0 -4px #fff6ef, 4px 0 0 -2px #fff6ef,
-    8px 0 0 -4px #fff6ef;
+  box-shadow: -4px 0 0 -2px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
+    -8px 0 0 -4px
+      ${(props) =>
+        props.tabIndex === "1"
+          ? "#fff6ef"
+          : props.tabIndex === "2"
+          ? "#ffffa5"
+          : "#f7ffff"},
+    4px 0 0 -2px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
+    8px 0 0 -4px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")};
   line-height: 0.8em;
 `;
 
@@ -257,13 +264,14 @@ export const RightContainer = styled.div`
     #a0f1d8 1px,
     #a1f2d9
   );
+  height: 414px;
 `;
 
 export const MovesContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 10px;
-  gap: 10px;
+  gap: 15px;
 `;
 
 export const MoveContainer = styled.div`
@@ -284,8 +292,23 @@ export const Move = styled.div`
   border-radius: 3px;
   color: #3a3939;
   display: flex;
-  flex-grow: 1;
-  justify-content: right;
-  padding: 0px 5px;
+  flex-direction: column;
+  align-items: end;
+  padding: 0 5px;
   margin: 5px 0 0 10px;
+  line-height: 0.6em;
+`;
+
+export const MoveText = styled.div`
+  font-size: 0.9em;
+  align-self: start;
+  margin: 5px 0 0 110px;
+`;
+
+export const MoveSet = styled.div`
+  font-size: 0.8em;
+`;
+
+export const PP = styled.span`
+  font-size: 0.85em;
 `;
