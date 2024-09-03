@@ -59,7 +59,7 @@ const Work = () => {
           <CardContainer>
             <ProjectCard
               $mode={theme}
-              onClick={() => onProjectClick("nvSupportPg")}
+              // onClick={() => onProjectClick("nvSupportPg")}
             >
               <ProjectImg
                 src="/nv_support_page_categories.png"
@@ -76,7 +76,7 @@ const Work = () => {
           <CardContainer>
             <ProjectCard
               $mode={theme}
-              onClick={() => onProjectClick("ninjachat")}
+              // onClick={() => onProjectClick("ninjachat")}
             >
               <ProjectImg src="/ninjachat.png" alt="NinjaChat SS" />
               <ProjectBack
@@ -88,7 +88,10 @@ const Work = () => {
             </ProjectCard>
           </CardContainer>
           <CardContainer>
-            <ProjectCard $mode={theme} onClick={() => onProjectClick("c2c")}>
+            <ProjectCard
+              $mode={theme}
+              // onClick={() => onProjectClick("c2c")}
+            >
               <ProjectImg src="/ninjachat.png" alt="Consignee to Consignee" />
               <ProjectBack
                 $bgColor={colors.ninjaRed}
@@ -100,11 +103,24 @@ const Work = () => {
           </CardContainer>
         </ProjectCardsContainer>
         <SubHeading>Personal</SubHeading>
-        {/* <ProjectCard $mode={theme} onClick={() => onProjectClick("pkCard")}>
-        <img src="/pk_resume.png" alt="Pokemon Style Portfolio SS" />
-      </ProjectCard> */}
+        <ProjectCardsContainer>
+          <CardContainer>
+            <ProjectCard $mode={theme} onClick={() => onProjectClick("pkCard")}>
+              <ProjectImg
+                src="/pk_resume.png"
+                alt="Pokemon Style Portfolio SS"
+              />
+              <ProjectBack
+                $bgColor={colors.btn_bg_grey}
+                $color={colors.text_black}
+              >
+                An interactive portfolio styled like a Pokemon info menu
+              </ProjectBack>
+            </ProjectCard>
+          </CardContainer>
+        </ProjectCardsContainer>
 
-        <SubHeading>School</SubHeading>
+        {/* <SubHeading>School</SubHeading> */}
         {/* TODO */}
       </SectionContainer>
     </WorkContainer>
