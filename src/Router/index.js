@@ -1,9 +1,9 @@
 import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import About from "../components/About";
+import About from "../pages/About";
 import PokemonCard from "../components/PokemonCard";
-import Work from "../components/Work";
-import PageNotFound from "../components/PageNotFound";
+import Work from "../pages/Work";
+import PageNotFound from "../pages/PageNotFound";
 
 const Router = () => {
   return (

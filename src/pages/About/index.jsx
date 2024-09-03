@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Body, Heading, ChillContainer, StyledText, VideoContainer } from "./styles";
+import { ChillContainer, StyledText, VideoContainer } from "./styles";
+import HeadingText from "../../components/HeadingText";
+import BodyText from "../../components/BodyText";
 
 const About = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -13,8 +15,8 @@ const About = () => {
   return (
     <ChillContainer>
       <div onMouseLeave={pauseVideo}>
-        <Heading>About Me</Heading>
-        <Body>
+        <HeadingText>About Me</HeadingText>
+        <BodyText>
           I am Software Engineer based in Singapore, with experience in
           developing web applications and chatbots. I am interested in creating
           user-friendly applications and I am always looking for opportunities
@@ -36,7 +38,7 @@ const About = () => {
             *
           </StyledText>
           .
-        </Body>
+        </BodyText>
         {showVideo && (
           <VideoContainer
             width="560"

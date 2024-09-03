@@ -223,36 +223,37 @@ const PokemonCard = () => {
 
   return (
     <PageContainer>
-    <Container>
-      <CardContainer tabIndex={currPaginationTab}>
-        <HeaderContainer>
-          <PaginationBar>
-            <SelectedPaginationBar>
-              <PaginationBarText>
-                {leftPaginationTabs[currPaginationTab - 1]}
-              </PaginationBarText>
-              {leftPaginationTabs.map((tab, index) => (
+      <p>Best Viewed on Laptop</p>
+      <Container>
+        <CardContainer tabIndex={currPaginationTab}>
+          <HeaderContainer>
+            <PaginationBar>
+              <SelectedPaginationBar>
+                <PaginationBarText>
+                  {leftPaginationTabs[currPaginationTab - 1]}
+                </PaginationBarText>
+                {leftPaginationTabs.map((tab, index) => (
+                  <PaginationDot
+                    key={index}
+                    position={index + 1 - currPaginationTab}
+                    onClick={() => onPaginationTabChange(index + 1)}
+                  />
+                ))}
+              </SelectedPaginationBar>
+              {rightPaginationTabs.map((tab, index) => (
                 <PaginationDot
                   key={index}
-                  position={index + 1 - currPaginationTab}
-                  onClick={() => onPaginationTabChange(index + 1)}
+                  position={index + leftPaginationTabs.length + 1}
+                  onClick={() =>
+                    onPaginationTabChange(index + currPaginationTab + 1)
+                  }
                 />
               ))}
-            </SelectedPaginationBar>
-            {rightPaginationTabs.map((tab, index) => (
-              <PaginationDot
-                key={index}
-                position={index + leftPaginationTabs.length + 1}
-                onClick={() =>
-                  onPaginationTabChange(index + currPaginationTab + 1)
-                }
-              />
-            ))}
-          </PaginationBar>
-        </HeaderContainer>
-        <TabContent tab={leftPaginationTabs[currPaginationTab - 1]} />
-      </CardContainer>
-    </Container>
+            </PaginationBar>
+          </HeaderContainer>
+          <TabContent tab={leftPaginationTabs[currPaginationTab - 1]} />
+        </CardContainer>
+      </Container>
     </PageContainer>
   );
 };

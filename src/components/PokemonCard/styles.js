@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
 `;
 
 export const Container = styled.div`
@@ -9,7 +12,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 1.8em;
   font-family: "VT323", monospace;
   min-width: fit-content;
 `;

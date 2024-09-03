@@ -32,19 +32,6 @@ export const SectionContainer = styled.div`
   }
 `;
 
-export const Heading = styled.h1`
-  font-size: 5rem;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 2.5rem;
-  }
-`;
-
 export const SubHeadingContainer = styled.div`
   display: flex;
   align-items: center;

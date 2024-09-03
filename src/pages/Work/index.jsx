@@ -3,7 +3,6 @@ import { useTheme } from "../../contexts/ThemeContext";
 import { colors } from "../../utils/colors";
 import {
   CardContainer,
-  Heading,
   ProjectBack,
   ProjectCard,
   ProjectCardsContainer,
@@ -16,6 +15,7 @@ import {
   TechStackContainer,
   WorkContainer,
 } from "./styles";
+import HeadingText from "../../components/HeadingText";
 
 const Work = () => {
   const techStack = {
@@ -43,7 +43,7 @@ const Work = () => {
   return (
     <WorkContainer>
       <SectionContainer>
-        <Heading>Tech Stack</Heading>
+        <HeadingText>Tech Stack</HeadingText>
         <TechStackContainer>
           {Object.keys(techStack).map((tech) => (
             <TechStackButton key={tech} $bgColor={techStack[tech]}>
@@ -53,7 +53,7 @@ const Work = () => {
         </TechStackContainer>
       </SectionContainer>
       <SectionContainer>
-        <Heading>Projects</Heading>
+        <HeadingText>Projects</HeadingText>
         <SubHeading>Ninja Van</SubHeading>
         <ProjectCardsContainer>
           <CardContainer>

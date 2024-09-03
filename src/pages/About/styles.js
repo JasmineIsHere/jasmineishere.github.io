@@ -24,38 +24,6 @@ export const Picture = styled.img`
   }
 `;
 
-export const Heading = styled.h1`
-  font-size: 5rem;
-
-  @media (max-width: 768px) {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 2.5rem;
-  }
-`;
-
-
-export const Body = styled.div`
-  font-family: "Open Sans", sans-serif;
-  font-size: 24px;
-  line-height: 1.5;
-  font-size: 2rem;
-  margin-right: 2rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem;
-    text-align: justify;
-    margin-right: 0;
-  }
-
-  @media (max-width: 320px) {
-    font-size: 1rem;
-  }
-`;
-
 export const StyledText = styled.span`
   color: ${(props) => props.$color || "inherit"};
   font-weight: ${(props) => props.$bold ? "bold" : "normal"};
