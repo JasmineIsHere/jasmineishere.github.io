@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Body, Heading, ChillContainer, StyledText } from "./styles";
+import { Body, Heading, ChillContainer, StyledText, VideoContainer } from "./styles";
 
 const About = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -22,10 +22,11 @@ const About = () => {
           reading, cooking, watching shows, rollerblading, painting, 3D
           printing, travelling, sewing, swimming, candle making, and probably a
           lot more{" "}
-          <StyledText $italic $fontSize="1.5rem">
+          <StyledText $italic>
             *cues{" "}
             <StyledText
               onMouseOver={showVideoOnHover}
+              onClick={showVideoOnHover}
               $pointer
               $bold
               $italic
@@ -37,7 +38,7 @@ const About = () => {
           .
         </Body>
         {showVideo && (
-          <iframe
+          <VideoContainer
             width="560"
             height="315"
             src="https://www.youtube.com/embed/bYlVAptmHtg?&autoplay=1"
@@ -46,7 +47,7 @@ const About = () => {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
-          ></iframe>
+          ></VideoContainer>
         )}
       </div>
     </ChillContainer>

@@ -8,7 +8,12 @@ export const ChillContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    padding: 2rem;
+  }
 `;
 
 export const Picture = styled.img`
@@ -21,6 +26,15 @@ export const Picture = styled.img`
 
 export const Heading = styled.h1`
   font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 2.5rem;
+  }
 `;
 
 
@@ -30,6 +44,16 @@ export const Body = styled.div`
   line-height: 1.5;
   font-size: 2rem;
   margin-right: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-right: 0;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1rem;
+  }
 `;
 
 export const StyledText = styled.span`
@@ -39,4 +63,14 @@ export const StyledText = styled.span`
   text-decoration: ${(props) => props.$underline ? "underline" : "none"};
   font-size: ${(props) => props.$fontSize || "inherit"};
   cursor: ${(props) => props.$pointer ? "pointer" : "auto"};
+`;
+
+export const VideoContainer = styled.iframe`
+  width: 560px;
+  height: 315px;
+  margin-top: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
