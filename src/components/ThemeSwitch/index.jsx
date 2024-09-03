@@ -18,7 +18,8 @@ const ThemeSwitch = ({ children }) => {
 
   useEffect(() => {
     const defaultTheme = getDefaultTheme();
-    if (defaultTheme === "dark") {
+
+    if (theme !== null && defaultTheme === "dark") {
       toggleTheme();
     }
   }, []);
