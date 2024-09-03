@@ -5,6 +5,10 @@ import { colors } from "../../utils/colors";
 
 export const Container = styled.div`
   display: flex;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const NavigationContainer = styled.div`
@@ -18,13 +22,20 @@ export const NavigationContainer = styled.div`
   color: ${(props) => props.$mode === 'light' ? colors.text_black : colors.text_white};
 
   @media (max-width: 768px) {
-    flex-direction: row;
+    padding: 2rem 0 0 0;
+    align-items: center;
   }
 `;
 
 export const NameHeader = styled.h1`
   font-size: 6rem;
   font-family: "Dokdo", system-ui;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+  }
 `;
 
 export const NavigationButton = styled.div`
@@ -53,20 +64,6 @@ export const ButtonsContainer = styled.div`
 
 export const ResumeBtn = styled.img`
   cursor: pointer;
-  position: absolute;
-`;
-
-export const DownloadBtn = styled.img`
-  cursor: pointer;
-  position: relative;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: 0.1s ease-in-out;
-
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 export const IconButton = styled.div`

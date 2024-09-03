@@ -24,7 +24,6 @@ const Navigation = ({ children }) => {
           Tan
         </NameHeader>
         <NavigationButton>
-          {/* TODO: Fix themes not persisted when selected new routes/page refresh; try local storage */}
           <NavigationLink href="/">Work</NavigationLink>
         </NavigationButton>
         <NavigationButton>
@@ -45,14 +44,9 @@ const Navigation = ({ children }) => {
             </a>
           </IconButton>
           <IconButton>
-            <a href="/Resume.pdf" download>
+            <a href="/Resume.pdf" target="_blank">
               <ResumeBtn
                 src="/resume_icon.png"
-                alt="resume_download"
-                width="50rem"
-              />
-              <DownloadBtn
-                src="/resume_download_icon.png"
                 alt="resume_download"
                 width="50rem"
               />

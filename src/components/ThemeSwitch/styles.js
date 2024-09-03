@@ -14,6 +14,10 @@ export const LightSwitchContainer = styled.div`
   justify-content: right;
   align-items: center;
   margin: 0rem 2rem 2rem 2rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const LightSwitch = styled.img`

@@ -5,15 +5,44 @@ export const WorkContainer = styled.div`
   font-family: "Dokdo", system-ui;
   font-weight: 400;
   font-style: normal;
-  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  height: fit-content;
+
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+`;
+
+export const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  height: fit-content;
+  padding: 0 4rem;
+
+
+  @media (max-width: 768px) {
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 0;
+  }
 `;
 
 export const Heading = styled.h1`
   font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const SubHeadingContainer = styled.div`
@@ -27,16 +56,33 @@ export const SubHeadingLine = styled.div`
   max-width: 70%;
   height: 0.5rem;
   background-color: ${(props) => props.$mode === "light" ? colors.bg_black : colors.bg_white};
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SubHeadingText = styled.h2`
   font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 320px) { 
+    font-size: 1.5rem;
+  }
 `;
 
 export const TechStackContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  
+  @media (max-width: 768px) {
+    justify-content: center;
+    max-width: 90%;
+  }
 `;
 
 export const TechStackButton = styled.div`
@@ -49,6 +95,14 @@ export const TechStackButton = styled.div`
   width: fit-content;
   border-radius: 50px;
   font-size: 3rem;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ProjectCardsContainer = styled.div`
@@ -56,12 +110,25 @@ export const ProjectCardsContainer = styled.div`
   flex-wrap: wrap;
   gap: 2rem;
   width: 90%;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const CardContainer = styled.div`
   width: 30rem;
   height: 30rem;
   perspective: 1000px;
+
+  @media (max-width: 768px) {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  @media (max-width: 320px) {
+    width: 8rem;
+    height: 8rem;
 `;
 
 export const ProjectCard = styled.div`
