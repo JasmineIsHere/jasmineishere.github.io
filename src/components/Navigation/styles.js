@@ -117,7 +117,6 @@ export const MobileNavigationBar = styled.div`
   justify-content: center;
   padding: 1rem 2rem;
   height: 3rem;
-  
 `;
 
 export const MenuIcon = styled(MenuOutlined)`
@@ -139,10 +138,6 @@ export const MobileNavigationMenu = styled.div`
   flex-direction: column;
   gap: 2rem;
   width: 100vw;
-  color: ${(props) =>
-    props.$mode === "light" ? colors.text_black : colors.text_white};
-  background-color: ${(props) =>
-    props.$mode === "light" ? colors.bg_white : colors.bg_black};
 
   @media (max-width: 320px) {
     padding: 1rem 0;
