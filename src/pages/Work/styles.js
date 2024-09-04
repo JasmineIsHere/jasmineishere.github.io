@@ -12,6 +12,11 @@ export const WorkContainer = styled.div`
 
   @media (max-width: 768px) {
     align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  @media (max-width: 320px) {
+    overflow: hidden;
   }
 `;
 
@@ -163,4 +168,8 @@ export const ProjectBack = styled(ProjectFace)`
   box-sizing: border-box;
   text-align: center;
   font-size: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;

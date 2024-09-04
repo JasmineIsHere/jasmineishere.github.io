@@ -32,7 +32,6 @@ import {
   SkillTextFieldContainer,
   AbilityTextField,
   AbilityTextFieldContainer,
-  PageContainer,
   MoveText,
   MoveSet,
   PP,
