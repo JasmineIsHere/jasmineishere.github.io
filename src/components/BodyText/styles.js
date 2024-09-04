@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Body = styled.div`
   font-family: "Open Sans", sans-serif;
-  font-size: 24px;
   line-height: 1.5;
   font-size: 2rem;
   margin-right: 2rem;

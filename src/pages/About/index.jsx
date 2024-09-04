@@ -3,11 +3,16 @@ import {
   SectionContainer,
   ChillContainer,
   VideoContainer,
+  TimelineHeadingText,
+  StyledTimeline,
+  TimelineBodyText,
+  Picture,
 } from "./styles";
 import HeadingText from "../../components/HeadingText";
 import BodyText from "../../components/BodyText";
 import PrimaryButton from "../../components/PrimaryButton";
-import { PlayCircleOutlined } from "@ant-design/icons";
+import { CheckCircleOutlined, PlayCircleOutlined, SmileFilled } from "@ant-design/icons";
+import { colors } from "../../utils/colors";
 
 const About = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -72,7 +77,77 @@ const About = () => {
           </a>
         </PrimaryButton>
       </SectionContainer>
-
+      <SectionContainer>
+        <HeadingText>Education</HeadingText>
+        <StyledTimeline
+          $lineColor={colors.btn_bg_grey}
+          items={[
+            {
+              dot: (<SmileFilled />),
+              color: colors.switch_yellow,
+              children: (
+                <>
+                <TimelineHeadingText>
+                  Singapore Management University
+                </TimelineHeadingText>
+                <TimelineBodyText>
+                  Bachelor of Science (Computer Science)<br/>
+                  Aug 2019 - Dec 2022
+                </TimelineBodyText>
+                </>
+              ),
+            },
+            {
+              color: colors.switch_yellow,
+              children: (
+                <>
+                <TimelineHeadingText>
+                  Pioneer Junior College
+                </TimelineHeadingText>
+                <TimelineBodyText>
+                  GCE A Level<br/>
+                  2017 - 2018
+                </TimelineBodyText>
+                </>
+              ),
+            },
+            {
+              color: colors.switch_yellow,
+              children: (
+                <>
+                <TimelineHeadingText>
+                  Jurong Secondary School
+                </TimelineHeadingText>
+                <TimelineBodyText>
+                  GCE O Level<br/>
+                  2013 - 2016
+                </TimelineBodyText>
+                </>
+              ),
+            },
+            {
+              color: colors.switch_yellow,
+              children: (
+                <>
+                <TimelineHeadingText>
+                  Juying Primary School
+                </TimelineHeadingText>
+                <TimelineBodyText>
+                  PSLE<br/>
+                  2007 - 2012
+                </TimelineBodyText>
+                </>
+              ),
+            }
+          ]}>
+        </StyledTimeline>
+      </SectionContainer>
+      <SectionContainer>
+        <HeadingText>Other Certifications</HeadingText>
+        <a href="https://www.credly.com/badges/18c4617e-19c6-4670-9669-e35f9779a68d" target="_blank" rel="noreferrer">
+          <Picture src="/aws_cloud_practitioner.png" alt="aws cloud practitioner badge" />
+        </a>
+      </SectionContainer>
     </ChillContainer>
   );
 };

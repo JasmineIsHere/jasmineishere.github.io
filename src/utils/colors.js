@@ -6,6 +6,7 @@ export const colors = {
   btn_text: "#252821",
   btn_bg_grey: "#D9D9D9",
   btn_bg_grey_hover: "#BFBFBF",
+  switch_yellow: "#FFEE70",
   java: "#FFBB6C",
   go: "#7CEBFF",
   react: "#A4FBF1",
