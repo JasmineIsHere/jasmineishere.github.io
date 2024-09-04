@@ -8,12 +8,12 @@ import {
   MobileNavigationContainer,
   MobileNavigationMenu,
   NameHeader,
-  NavigationButton,
   NavigationContainer,
   NavigationLink,
   ResumeBtn,
 } from "./styles";
 import { useTheme } from "../../contexts/ThemeContext";
+import PrimaryButton from "../PrimaryButton";
 
 const Navigation = ({ children }) => {
   const { theme } = useTheme();
@@ -35,12 +35,12 @@ const Navigation = ({ children }) => {
           <br />
           Tan
         </NameHeader>
-        <NavigationButton>
+        <PrimaryButton>
           <NavigationLink href="/">Work</NavigationLink>
-        </NavigationButton>
-        <NavigationButton>
+        </PrimaryButton>
+        <PrimaryButton>
           <NavigationLink href="/#/about">About</NavigationLink>
-        </NavigationButton>
+        </PrimaryButton>
         <ButtonsContainer>
           <IconButton>
             <a

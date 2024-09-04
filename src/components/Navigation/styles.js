@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const NavigationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem 0 0 2rem;
   background-color: ${(props) =>
     props.$mode === "light" ? colors.bg_white : colors.bg_black};
@@ -44,24 +44,10 @@ export const NameHeader = styled.h1`
   }
 `;
 
-export const NavigationButton = styled.div`
-  background-color: ${colors.btn_bg_grey};
-  border-radius: 50px;
-  padding: 0rem 3rem;
-  cursor: pointer;
-  width: fit-content;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
 export const NavigationLink = styled.a`
   color: ${(props) =>
     props.$mode === "dark" ? colors.text_white : colors.text_black};
-  text-decoration: none;
+  font-size: 3rem;
 
   @media (max-width: 768px) {
     font-size: 2.5rem;

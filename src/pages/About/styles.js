@@ -26,11 +26,11 @@ export const Picture = styled.img`
 
 export const StyledText = styled.span`
   color: ${(props) => props.$color || "inherit"};
-  font-weight: ${(props) => props.$bold ? "bold" : "normal"};
-  font-style: ${(props) => props.$italic ? "italic" : "normal"};
-  text-decoration: ${(props) => props.$underline ? "underline" : "none"};
+  font-weight: ${(props) => (props.$bold ? "bold" : "normal")};
+  font-style: ${(props) => (props.$italic ? "italic" : "normal")};
+  text-decoration: ${(props) => (props.$underline ? "underline" : "none")};
   font-size: ${(props) => props.$fontSize || "inherit"};
-  cursor: ${(props) => props.$pointer ? "pointer" : "auto"};
+  cursor: ${(props) => (props.$pointer ? "pointer" : "auto")};
 `;
 
 export const VideoContainer = styled.iframe`
@@ -40,5 +40,14 @@ export const VideoContainer = styled.iframe`
 
   @media (max-width: 768px) {
     width: 100%;
+  }
+`;
+
+export const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    align-items: center;
   }
 `;
