@@ -97,6 +97,13 @@ export const TechStackButton = styled.div`
   }
 `;
 
+export const TechStackPopover = styled.div`
+  width: 20rem;
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+
+`;
+
 export const ProjectCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

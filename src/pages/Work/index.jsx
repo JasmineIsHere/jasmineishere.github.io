@@ -13,17 +13,63 @@ import {
   SubHeadingText,
   TechStackButton,
   TechStackContainer,
+  TechStackPopover,
   WorkContainer,
 } from "./styles";
 import HeadingText from "../../components/HeadingText";
+import { Popover } from "antd";
 
 const Work = () => {
   const techStack = {
-    Java: colors.java,
-    Go: colors.go,
-    React: colors.react,
-    MySQL: colors.mysql,
-    Others: colors.others,
+    Java: {
+      backgroundColor: colors.java,
+      hoverText: (
+        <TechStackPopover>
+          One of the first languages that I picked up since university and
+          probably the one I am most comforable at.
+        </TechStackPopover>
+      ),
+    },
+    Go: {
+      backgroundColor: colors.go,
+      hoverText: (
+        <TechStackPopover>
+          Go was something I quickly picked up in my first job and I have been
+          using it for the past 2 years.
+        </TechStackPopover>
+      ),
+    },
+    React: {
+      backgroundColor: colors.react,
+      hoverText: (
+        <TechStackPopover>
+          Not a language but a framework that I recently learned while training
+          myself to be a full-stack developer. Currently, almost all of my
+          frontend experience is with React.
+        </TechStackPopover>
+      ),
+    },
+    SQL: {
+      backgroundColor: colors.mysql,
+      hoverText: (
+        <TechStackPopover>
+          I often work with relational databases like MySQL and TiDB when
+          developing backend services so I am familiar with writing SQL queries
+          and designing database schemas.
+        </TechStackPopover>
+      ),
+    },
+    Others: {
+      backgroundColor: colors.others,
+      hoverText: (
+        <TechStackPopover>
+          Other than the key ones listed, I worked with different tools as a
+          software engineer such as Kafka (messaging queue), Redis (cache),
+          Mixpanel (FE analytics), Bamboo (CI/CD), etc to meet the varying needs
+          of the project I am tasked with.
+        </TechStackPopover>
+      ),
+    },
   };
 
   const { theme } = useTheme();
@@ -46,9 +92,14 @@ const Work = () => {
         <HeadingText>Tech Stack</HeadingText>
         <TechStackContainer>
           {Object.keys(techStack).map((tech) => (
-            <TechStackButton key={tech} $bgColor={techStack[tech]}>
-              {tech}
-            </TechStackButton>
+            <Popover content={techStack[tech].hoverText}>
+              <TechStackButton
+                key={tech}
+                $bgColor={techStack[tech].backgroundColor}
+              >
+                {tech}
+              </TechStackButton>
+            </Popover>
           ))}
         </TechStackContainer>
       </SectionContainer>
@@ -57,10 +108,7 @@ const Work = () => {
         <SubHeading>Ninja Van</SubHeading>
         <ProjectCardsContainer>
           <CardContainer>
-            <ProjectCard
-              $mode={theme}
-              // onClick={() => onProjectClick("nvSupportPg")}
-            >
+            <ProjectCard $mode={theme}>
               <ProjectImg
                 src="/nv_support_page_categories.png"
                 alt="Ninja Van Support Page Revamp SS"
@@ -74,10 +122,7 @@ const Work = () => {
             </ProjectCard>
           </CardContainer>
           <CardContainer>
-            <ProjectCard
-              $mode={theme}
-              // onClick={() => onProjectClick("ninjachat")}
-            >
+            <ProjectCard $mode={theme}>
               <ProjectImg src="/ninjachat.png" alt="NinjaChat SS" />
               <ProjectBack
                 $bgColor={colors.ninjaRed}
@@ -88,10 +133,7 @@ const Work = () => {
             </ProjectCard>
           </CardContainer>
           <CardContainer>
-            <ProjectCard
-              $mode={theme}
-              // onClick={() => onProjectClick("c2c")}
-            >
+            <ProjectCard $mode={theme}>
               <ProjectImg src="/ninjachat.png" alt="Consignee to Consignee" />
               <ProjectBack
                 $bgColor={colors.ninjaRed}
