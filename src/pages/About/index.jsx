@@ -11,7 +11,11 @@ import {
 import HeadingText from "../../components/HeadingText";
 import BodyText from "../../components/BodyText";
 import PrimaryButton from "../../components/PrimaryButton";
-import { CheckCircleOutlined, PlayCircleOutlined, SmileFilled } from "@ant-design/icons";
+import {
+  CheckCircleOutlined,
+  PlayCircleOutlined,
+  SmileFilled,
+} from "@ant-design/icons";
 import { colors } from "../../utils/colors";
 
 const About = () => {
@@ -65,11 +69,14 @@ const About = () => {
           more of a explorer than a settler because the world is filled with so
           many interesting things that it seems like a pity to focus on only one
           thing for life. I am more empathetic than logical because people
-          matter more to me than facts.
+          matter more to me than facts. <br />
+          As a colleague, I enjoy the ability to engage in discussions to solve
+          a problem when in a team setting but I am also independent enough to
+          rely on my own resourcefulness to overcome any challenges I face. 
         </BodyText>
         <PrimaryButton>
           <a
-            href="https://www.16personalities.com/infp-personality"
+            href="https://www.16personalities.com/infps-at-work"
             target="_blank"
             rel="noreferrer"
           >
@@ -83,17 +90,18 @@ const About = () => {
           $lineColor={colors.btn_bg_grey}
           items={[
             {
-              dot: (<SmileFilled />),
+              dot: <SmileFilled />,
               color: colors.switch_yellow,
               children: (
                 <>
-                <TimelineHeadingText>
-                  Singapore Management University
-                </TimelineHeadingText>
-                <TimelineBodyText>
-                  Bachelor of Science (Computer Science)<br/>
-                  Aug 2019 - Dec 2022
-                </TimelineBodyText>
+                  <TimelineHeadingText>
+                    Singapore Management University
+                  </TimelineHeadingText>
+                  <TimelineBodyText>
+                    Bachelor of Science (Computer Science)
+                    <br />
+                    Aug 2019 - Dec 2022
+                  </TimelineBodyText>
                 </>
               ),
             },
@@ -101,13 +109,14 @@ const About = () => {
               color: colors.switch_yellow,
               children: (
                 <>
-                <TimelineHeadingText>
-                  Pioneer Junior College
-                </TimelineHeadingText>
-                <TimelineBodyText>
-                  GCE A Level<br/>
-                  2017 - 2018
-                </TimelineBodyText>
+                  <TimelineHeadingText>
+                    Pioneer Junior College
+                  </TimelineHeadingText>
+                  <TimelineBodyText>
+                    GCE A Level
+                    <br />
+                    2017 - 2018
+                  </TimelineBodyText>
                 </>
               ),
             },
@@ -115,13 +124,14 @@ const About = () => {
               color: colors.switch_yellow,
               children: (
                 <>
-                <TimelineHeadingText>
-                  Jurong Secondary School
-                </TimelineHeadingText>
-                <TimelineBodyText>
-                  GCE O Level<br/>
-                  2013 - 2016
-                </TimelineBodyText>
+                  <TimelineHeadingText>
+                    Jurong Secondary School
+                  </TimelineHeadingText>
+                  <TimelineBodyText>
+                    GCE O Level
+                    <br />
+                    2013 - 2016
+                  </TimelineBodyText>
                 </>
               ),
             },
@@ -129,23 +139,31 @@ const About = () => {
               color: colors.switch_yellow,
               children: (
                 <>
-                <TimelineHeadingText>
-                  Juying Primary School
-                </TimelineHeadingText>
-                <TimelineBodyText>
-                  PSLE<br/>
-                  2007 - 2012
-                </TimelineBodyText>
+                  <TimelineHeadingText>
+                    Juying Primary School
+                  </TimelineHeadingText>
+                  <TimelineBodyText>
+                    PSLE
+                    <br />
+                    2007 - 2012
+                  </TimelineBodyText>
                 </>
               ),
-            }
-          ]}>
-        </StyledTimeline>
+            },
+          ]}
+        ></StyledTimeline>
       </SectionContainer>
       <SectionContainer>
         <HeadingText>Other Certifications</HeadingText>
-        <a href="https://www.credly.com/badges/18c4617e-19c6-4670-9669-e35f9779a68d" target="_blank" rel="noreferrer">
-          <Picture src="/aws_cloud_practitioner.png" alt="aws cloud practitioner badge" />
+        <a
+          href="https://www.credly.com/badges/18c4617e-19c6-4670-9669-e35f9779a68d"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Picture
+            src="/aws_cloud_practitioner.png"
+            alt="aws cloud practitioner badge"
+          />
         </a>
       </SectionContainer>
     </ChillContainer>
