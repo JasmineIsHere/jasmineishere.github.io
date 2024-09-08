@@ -12,7 +12,6 @@ import HeadingText from "../../components/HeadingText";
 import BodyText from "../../components/BodyText";
 import PrimaryButton from "../../components/PrimaryButton";
 import {
-  CheckCircleOutlined,
   PlayCircleOutlined,
   SmileFilled,
 } from "@ant-design/icons";
