@@ -36,7 +36,7 @@ const Navigation = ({ children }) => {
           Tan
         </NameHeader>
         <PrimaryButton>
-          <NavigationLink href="/">Work</NavigationLink>
+          <NavigationLink href="/#">Work</NavigationLink>
         </PrimaryButton>
         <PrimaryButton>
           <NavigationLink href="/#/about">About</NavigationLink>

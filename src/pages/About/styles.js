@@ -1,6 +1,5 @@
 import { Timeline } from "antd";
 import styled from "styled-components";
-import BodyText from "../../components/BodyText";
 
 export const ChillContainer = styled.div`
   font-family: "Dokdo", system-ui;

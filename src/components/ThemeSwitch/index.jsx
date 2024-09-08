@@ -1,11 +1,5 @@
-import { useEffect } from "react";
 import { useTheme } from "../../contexts/ThemeContext";
 import { Container, LightSwitch, LightSwitchContainer } from "./styles";
-
-const getDefaultTheme = () => {
-  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  return isDarkMode ? "dark" : "light";
-};
 
 const ThemeSwitch = ({ children }) => {
   const { theme, toggleTheme } = useTheme();
@@ -15,14 +9,6 @@ const ThemeSwitch = ({ children }) => {
     soundEffect.play();
     toggleTheme();
   };
-
-  useEffect(() => {
-    const defaultTheme = getDefaultTheme();
-
-    if (theme !== null && defaultTheme === "dark") {
-      toggleTheme();
-    }
-  }, []);
 
   return (
     <Container $mode={theme}>
