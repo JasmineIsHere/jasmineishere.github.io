@@ -18,6 +18,7 @@ import {
 } from "./styles";
 import HeadingText from "../../components/HeadingText";
 import { Popover } from "antd";
+import PrimaryButton from "../../components/PrimaryButton";
 
 const Work = () => {
   const techStack = {
@@ -73,29 +74,6 @@ const Work = () => {
   };
 
   const projects = {
-    "Ninja Van": [
-      {
-        imgSrc: "/nv_support_page_categories.png",
-        altText: "Ninja Van Support Page Revamp SS",
-        bgColor: colors.ninjaRed,
-        textColor: colors.text_white,
-        text: "Revamped Ninja Van support page",
-      },
-      {
-        imgSrc: "/ninjachat.png",
-        altText: "NinjaChat SS",
-        bgColor: colors.ninjaRed,
-        textColor: colors.text_white,
-        text: "Implemented new flows for Ninja Chat",
-      },
-      {
-        imgSrc: "/ninja_flexi.png",
-        altText: "Ninja Flexi SS",
-        bgColor: colors.ninjaRed,
-        textColor: colors.text_white,
-        text: "Kickstarted the proof of concept for Ninja Flexi",
-      },
-    ],
     "Personal": [
       {
         imgSrc: "/pk_resume.png",
@@ -104,6 +82,29 @@ const Work = () => {
         textColor: colors.text_black,
         text: "An interactive portfolio styled like a Pokemon info menu",
         onClick: () => onProjectClick("pkCard"),
+      },
+    ],
+    "Ninja Van": [
+      {
+        imgSrc: "/nv_support_page_categories.png",
+        altText: "Ninja Van Support Page Revamp SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Created new components to support the marketing team’s goals to revamp the support page and improve usefulness of the new support page to reduce agents’ contact point. Integrated new data points with the new page so that the team is also able to monitor the website’s performance through Google Analytics.",
+      },
+      {
+        imgSrc: "/ninjachat.png",
+        altText: "NinjaChat SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Created new flows for the customer support chatbot as well as maintained and supported the usage of existing features of the chatbot especially during high traffic periods.",
+      },
+      {
+        imgSrc: "/ninja_flexi.png",
+        altText: "Ninja Flexi SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Designed a microsite for anyone to try out Ninja Van’s delivery service without having to sign up as a shipper but still able to enjoy special features such as pickup from doorstep and parcel status updates. ",
       },
     ],
   };
@@ -141,25 +142,31 @@ const Work = () => {
       </SectionContainer>
       <SectionContainer>
         <HeadingText>Projects</HeadingText>
-        {
-          Object.keys(projects).map((projectType) => (
-            <>
-              <SubHeading>{projectType}</SubHeading>
-              <ProjectCardsContainer>
-                {projects[projectType].map((project) => (
-                  <CardContainer>
-                    <ProjectCard onClick={project.onClick}>
-                      <ProjectImg
-                        src={project.imgSrc}
-                        alt={project.altText}
-                      />
-                    </ProjectCard>
-                  </CardContainer>
-                ))}
-              </ProjectCardsContainer>
-            </>
-          ))
-        }
+        {Object.keys(projects).map((projectType) => (
+          <>
+            <SubHeading>{projectType}</SubHeading>
+            <ProjectCardsContainer>
+              {projects[projectType].map((project) => (
+                <CardContainer>
+                  <ProjectCard>
+                    <ProjectImg src={project.imgSrc} alt={project.altText} />
+                    <ProjectBack
+                      $bgColor={project.bgColor}
+                      $textColor={project.textColor}
+                    >
+                      <p>{project.text}</p>
+                      {project.onClick && (
+                        <PrimaryButton $bgColor={colors.bg_white} onClick={project.onClick}>
+                          View More
+                        </PrimaryButton>
+                      )}
+                    </ProjectBack>
+                  </ProjectCard>
+                </CardContainer>
+              ))}
+            </ProjectCardsContainer>
+          </>
+        ))}
       </SectionContainer>
     </WorkContainer>
   );

@@ -124,10 +124,6 @@ export const CardContainer = styled.div`
     width: 15rem;
     height: 15rem;
   }
-
-  @media (max-width: 320px) {
-    width: 8rem;
-    height: 8rem;
 `;
 
 export const ProjectCard = styled.div`
@@ -166,6 +162,7 @@ export const ProjectImg = styled(ProjectFace)`
 
 export const ProjectBack = styled(ProjectFace)`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${(props) => props.$bgColor || colors.btn_bg_grey};
@@ -174,9 +171,13 @@ export const ProjectBack = styled(ProjectFace)`
   padding: 20px;
   box-sizing: border-box;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 0.8rem;
   }
 `;
