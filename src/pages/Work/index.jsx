@@ -72,6 +72,42 @@ const Work = () => {
     },
   };
 
+  const projects = {
+    "Ninja Van": [
+      {
+        imgSrc: "/nv_support_page_categories.png",
+        altText: "Ninja Van Support Page Revamp SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Revamped Ninja Van support page",
+      },
+      {
+        imgSrc: "/ninjachat.png",
+        altText: "NinjaChat SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Implemented new flows for Ninja Chat",
+      },
+      {
+        imgSrc: "/ninja_flexi.png",
+        altText: "Ninja Flexi SS",
+        bgColor: colors.ninjaRed,
+        textColor: colors.text_white,
+        text: "Kickstarted the proof of concept for Ninja Flexi",
+      },
+    ],
+    "Personal": [
+      {
+        imgSrc: "/pk_resume.png",
+        altText: "Pokemon Style Portfolio SS",
+        bgColor: colors.btn_bg_grey,
+        textColor: colors.text_black,
+        text: "An interactive portfolio styled like a Pokemon info menu",
+        onClick: () => onProjectClick("pkCard"),
+      },
+    ],
+  };
+
   const { theme } = useTheme();
 
   const navigate = useNavigate();
@@ -105,65 +141,25 @@ const Work = () => {
       </SectionContainer>
       <SectionContainer>
         <HeadingText>Projects</HeadingText>
-        <SubHeading>Ninja Van</SubHeading>
-        <ProjectCardsContainer>
-          <CardContainer>
-            <ProjectCard $mode={theme}>
-              <ProjectImg
-                src="/nv_support_page_categories.png"
-                alt="Ninja Van Support Page Revamp SS"
-              />
-              <ProjectBack
-                $bgColor={colors.ninjaRed}
-                $color={colors.text_white}
-              >
-                Revamped Ninja Van support page
-              </ProjectBack>
-            </ProjectCard>
-          </CardContainer>
-          <CardContainer>
-            <ProjectCard $mode={theme}>
-              <ProjectImg src="/ninjachat.png" alt="NinjaChat SS" />
-              <ProjectBack
-                $bgColor={colors.ninjaRed}
-                $color={colors.text_white}
-              >
-                Implemented new flows for Ninja Chat
-              </ProjectBack>
-            </ProjectCard>
-          </CardContainer>
-          <CardContainer>
-            <ProjectCard $mode={theme}>
-              <ProjectImg src="/ninjachat.png" alt="Consignee to Consignee" />
-              <ProjectBack
-                $bgColor={colors.ninjaRed}
-                $color={colors.text_white}
-              >
-                Kickstarted the proof of concept for Ninja Flexi
-              </ProjectBack>
-            </ProjectCard>
-          </CardContainer>
-        </ProjectCardsContainer>
-        <SubHeading>Personal</SubHeading>
-        <ProjectCardsContainer>
-          <CardContainer>
-            <ProjectCard $mode={theme} onClick={() => onProjectClick("pkCard")}>
-              <ProjectImg
-                src="/pk_resume.png"
-                alt="Pokemon Style Portfolio SS"
-              />
-              <ProjectBack
-                $bgColor={colors.btn_bg_grey}
-                $color={colors.text_black}
-              >
-                An interactive portfolio styled like a Pokemon info menu
-              </ProjectBack>
-            </ProjectCard>
-          </CardContainer>
-        </ProjectCardsContainer>
-
-        {/* <SubHeading>School</SubHeading> */}
-        {/* TODO */}
+        {
+          Object.keys(projects).map((projectType) => (
+            <>
+              <SubHeading>{projectType}</SubHeading>
+              <ProjectCardsContainer>
+                {projects[projectType].map((project) => (
+                  <CardContainer>
+                    <ProjectCard onClick={project.onClick}>
+                      <ProjectImg
+                        src={project.imgSrc}
+                        alt={project.altText}
+                      />
+                    </ProjectCard>
+                  </CardContainer>
+                ))}
+              </ProjectCardsContainer>
+            </>
+          ))
+        }
       </SectionContainer>
     </WorkContainer>
   );
