@@ -11,11 +11,9 @@ import {
 import HeadingText from "../../components/HeadingText";
 import BodyText from "../../components/BodyText";
 import PrimaryButton from "../../components/PrimaryButton";
-import {
-  PlayCircleOutlined,
-  SmileFilled,
-} from "@ant-design/icons";
+import { InfoCircleOutlined, PlayCircleOutlined, SmileFilled } from "@ant-design/icons";
 import { colors } from "../../utils/colors";
+import { Tooltip } from "antd";
 
 const About = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -71,7 +69,7 @@ const About = () => {
           matter more to me than facts. <br />
           As a colleague, I enjoy the ability to engage in discussions to solve
           a problem when in a team setting but I am also independent enough to
-          rely on my own resourcefulness to overcome any challenges I face. 
+          rely on my own resourcefulness to overcome any challenges I face.
         </BodyText>
         <PrimaryButton>
           <a
@@ -97,7 +95,11 @@ const About = () => {
                     Singapore Management University
                   </TimelineHeadingText>
                   <TimelineBodyText>
-                    Bachelor of Science (Computer Science)
+                    Bachelor of Science (Computer Science) 
+                    <span> </span>
+                    <Tooltip placement="right" title="GPA: 3.46">
+                      <InfoCircleOutlined />
+                    </Tooltip>
                     <br />
                     Aug 2019 - Dec 2022
                   </TimelineBodyText>
