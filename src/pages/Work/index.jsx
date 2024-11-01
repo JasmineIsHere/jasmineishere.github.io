@@ -83,6 +83,14 @@ const Work = () => {
         text: "An interactive portfolio styled like a Pokemon info menu",
         onClick: () => onProjectClick("pkCard"),
       },
+      {
+        imgSrc: "/yt_downloader.png",
+        altText: "Youtube Downloader SS",
+        bgColor: colors.btn_bg_grey,
+        textColor: colors.text_black,
+        text: "A YouTube downloader that allows users to download videos and audio from YouTube",
+        onClick: () => onProjectClick("https://github.com/JasmineIsHere/yt-downloader", true),
+      }
     ],
     "Ninja Van": [
       {
@@ -112,8 +120,13 @@ const Work = () => {
   const { theme } = useTheme();
 
   const navigate = useNavigate();
-  const onProjectClick = (projectPath) => {
-    navigate(`/projects/${projectPath}`);
+  const onProjectClick = (path, isExternalLink=false) => {
+    if (isExternalLink) {
+      window.open(path, "_blank");
+      return;
+    } else {
+      navigate(`/projects/${path}`);
+    }
   };
 
   const SubHeading = ({ children }) => (
