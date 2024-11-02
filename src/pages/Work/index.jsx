@@ -23,7 +23,7 @@ import PrimaryButton from "../../components/PrimaryButton";
 const Work = () => {
   const techStack = {
     Java: {
-      backgroundColor: colors.java,
+      backgroundColor: colors.java_orange,
       hoverText: (
         <TechStackPopover>
           One of the first languages that I picked up since university and
@@ -32,7 +32,7 @@ const Work = () => {
       ),
     },
     Go: {
-      backgroundColor: colors.go,
+      backgroundColor: colors.go_turq,
       hoverText: (
         <TechStackPopover>
           Go was something I quickly picked up in my first job and I have been
@@ -41,7 +41,7 @@ const Work = () => {
       ),
     },
     React: {
-      backgroundColor: colors.react,
+      backgroundColor: colors.react_mint,
       hoverText: (
         <TechStackPopover>
           Not a language but a framework that I recently learned while training
@@ -51,7 +51,7 @@ const Work = () => {
       ),
     },
     SQL: {
-      backgroundColor: colors.mysql,
+      backgroundColor: colors.mysql_blue,
       hoverText: (
         <TechStackPopover>
           I often work with relational databases like MySQL and TiDB when
@@ -61,7 +61,7 @@ const Work = () => {
       ),
     },
     Others: {
-      backgroundColor: colors.others,
+      backgroundColor: colors.others_pink,
       hoverText: (
         <TechStackPopover>
           Other than the key ones listed, I worked with different tools as a
@@ -74,7 +74,7 @@ const Work = () => {
   };
 
   const projects = {
-    "Personal": [
+    Personal: [
       {
         imgSrc: "/pk_resume.png",
         altText: "Pokemon Style Portfolio SS",
@@ -89,28 +89,40 @@ const Work = () => {
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
         text: "A YouTube downloader that allows users to download videos and audio from YouTube",
-        onClick: () => onProjectClick("https://github.com/JasmineIsHere/yt-downloader", true),
-      }
+        onClick: () =>
+          onProjectClick(
+            "https://github.com/JasmineIsHere/yt-downloader",
+            true
+          ),
+      },
+      {
+        imgSrc: "/shiggy_game_inspo.png",
+        altText: "Shigaraki Game SS",
+        bgColor: colors.btn_bg_grey,
+        textColor: colors.text_black,
+        text: "Inspired by the Chrome Dino Game, but with Shigaraki Tomura from My Hero Academia",
+        onClick: () => onProjectClick("shiggy"),
+      },
     ],
     "Ninja Van": [
       {
         imgSrc: "/nv_support_page_categories.png",
         altText: "Ninja Van Support Page Revamp SS",
-        bgColor: colors.ninjaRed,
+        bgColor: colors.ninja_red,
         textColor: colors.text_white,
         text: "Created new components to support the marketing team’s goals to revamp the support page and improve usefulness of the new support page to reduce agents’ contact point. Integrated new data points with the new page so that the team is also able to monitor the website’s performance through Google Analytics.",
       },
       {
         imgSrc: "/ninjachat.png",
         altText: "NinjaChat SS",
-        bgColor: colors.ninjaRed,
+        bgColor: colors.ninja_red,
         textColor: colors.text_white,
         text: "Created new flows for the customer support chatbot as well as maintained and supported the usage of existing features of the chatbot especially during high traffic periods.",
       },
       {
         imgSrc: "/ninja_flexi.png",
         altText: "Ninja Flexi SS",
-        bgColor: colors.ninjaRed,
+        bgColor: colors.ninja_red,
         textColor: colors.text_white,
         text: "Designed a microsite for anyone to try out Ninja Van’s delivery service without having to sign up as a shipper but still able to enjoy special features such as pickup from doorstep and parcel status updates. ",
       },
@@ -120,7 +132,7 @@ const Work = () => {
   const { theme } = useTheme();
 
   const navigate = useNavigate();
-  const onProjectClick = (path, isExternalLink=false) => {
+  const onProjectClick = (path, isExternalLink = false) => {
     if (isExternalLink) {
       window.open(path, "_blank");
       return;
@@ -169,7 +181,10 @@ const Work = () => {
                     >
                       <p>{project.text}</p>
                       {project.onClick && (
-                        <PrimaryButton $bgColor={colors.bg_white} onClick={project.onClick}>
+                        <PrimaryButton
+                          $bgColor={colors.bg_white}
+                          onClick={project.onClick}
+                        >
                           View More
                         </PrimaryButton>
                       )}

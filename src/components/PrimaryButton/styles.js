@@ -7,6 +7,7 @@ export const ButtonContainer = styled.div`
   align-items: center;
   background-color: ${(props) => props.$bgColor || colors.btn_bg_grey};
   color: ${(props) => props.$color || colors.text_black};
+  outline: ${(props) => props.$outline || "none"};
   border-radius: 50px;
   padding: ${(props) => props.$padding || "0rem 3rem"};
   margin: ${(props) => props.$margin || "1rem 0"};

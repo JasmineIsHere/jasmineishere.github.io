@@ -1,8 +1,8 @@
 const { Heading } = require("./styles")
 
-const HeadingText = ({children}) => {
+const HeadingText = ({size="large", children}) => {
   return (
-    <Heading>{children}</Heading>
+    <Heading $size={size}>{children}</Heading>
   )
 }
 
