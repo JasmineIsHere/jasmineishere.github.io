@@ -96,7 +96,7 @@ const Work = () => {
           ),
       },
       {
-        imgSrc: "/shiggy_game_inspo.png",
+        imgSrc: "/shiggy_n_frens.png",
         altText: "Shigaraki Game SS",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
