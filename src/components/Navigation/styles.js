@@ -8,9 +8,14 @@ export const Container = styled.div`
   display: flex;
   font-family: "Dokdo", system-ui;
   font-size: 3rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
 
   @media (max-width: 768px) {
     flex-direction: column;
+    height: auto;
   }
 `;
 
@@ -18,7 +23,8 @@ export const NavigationContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 2rem 0 0 2rem;
+  padding: 1rem;
+  align-items: center;
   background-color: ${(props) =>
     props.$mode === "light" ? colors.bg_white : colors.bg_black};
   color: ${(props) =>
@@ -30,12 +36,12 @@ export const NavigationContainer = styled.div`
 `;
 
 export const NameHeader = styled.h1`
-  font-size: 6rem;
+  font-size: 5rem;
   font-family: "Dokdo", system-ui;
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
-    text-align: center;
     line-height: 1;
   }
 
@@ -81,7 +87,6 @@ export const IconButton = styled.div`
 
 export const MobileNavigationContainer = styled.div`
   display: none;
-  z-index: 1;
   box-shadow: ${(props) =>
     props.$mode === "light"
       ? "0 0 10px 0 rgba(0, 0, 0, 0.5)"
