@@ -21,3 +21,7 @@ export const ListItem = styled.li`
     font-size: 1rem;
   }
 `;
+
+export const Strikethrough = styled.span`
+  text-decoration: line-through;
+`;

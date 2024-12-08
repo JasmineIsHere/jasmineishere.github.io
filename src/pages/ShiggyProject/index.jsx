@@ -3,7 +3,7 @@ import BodyText from "../../components/BodyText";
 import HeadingText from "../../components/HeadingText";
 import PrimaryButton from "../../components/PrimaryButton";
 import ProjectContainer from "../../components/ProjectContainer";
-import { ButtonsContainer, ListItem } from "./styles";
+import { ButtonsContainer, ListItem, Strikethrough } from "./styles";
 import { colors } from "./../../utils/colors";
 
 const ShiggyProject = () => {
@@ -67,7 +67,9 @@ const ShiggyProject = () => {
         <ListItem>
           Increase difficulty by increasing the speed of the obstacles over time
         </ListItem>
-        <ListItem>Add music and sound effects</ListItem>
+        <ListItem>
+          <Strikethrough>Add music and sound effects</Strikethrough>
+        </ListItem>
         <ListItem>Randomize obstacles to generate</ListItem>
       </ul>
       <BodyText>
