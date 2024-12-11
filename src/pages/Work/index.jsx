@@ -100,7 +100,7 @@ const Work = () => {
         altText: "Shigaraki Game SS",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
-        text: "Inspired by the Chrome Dino Game, but with Shigaraki Tomura from My Hero Academia",
+        text: "A game inspired by the Chrome Dino, but with Shigaraki Tomura from My Hero Academia",
         onClick: () => onProjectClick("shiggy"),
       },
     ],
