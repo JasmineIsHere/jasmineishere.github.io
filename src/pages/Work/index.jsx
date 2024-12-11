@@ -76,7 +76,7 @@ const Work = () => {
   const projects = {
     Personal: [
       {
-        imgSrc: "/pk_resume.png",
+        imgSrc: "/project_faces/ditto.png",
         altText: "Pokemon Style Portfolio SS",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
@@ -84,7 +84,7 @@ const Work = () => {
         onClick: () => onProjectClick("pkCard"),
       },
       {
-        imgSrc: "/yt_downloader.png",
+        imgSrc: "/project_faces/ytdl.png",
         altText: "Youtube Downloader SS",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
@@ -96,7 +96,7 @@ const Work = () => {
           ),
       },
       {
-        imgSrc: "/shiggy_n_frens.png",
+        imgSrc: "/project_faces/shiggy.png",
         altText: "Shigaraki Game SS",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
@@ -106,21 +106,21 @@ const Work = () => {
     ],
     "Ninja Van": [
       {
-        imgSrc: "/nv_support_page_categories.png",
+        imgSrc: "/project_faces/nv_support_page_categories.png",
         altText: "Ninja Van Support Page Revamp SS",
         bgColor: colors.ninja_red,
         textColor: colors.text_white,
         text: "Created new components to support the marketing team’s goals to revamp the support page and improve usefulness of the new support page to reduce agents’ contact point. Integrated new data points with the new page so that the team is also able to monitor the website’s performance through Google Analytics.",
       },
       {
-        imgSrc: "/ninjachat.png",
+        imgSrc: "/project_faces/ninjachat.png",
         altText: "NinjaChat SS",
         bgColor: colors.ninja_red,
         textColor: colors.text_white,
         text: "Created new flows for the customer support chatbot as well as maintained and supported the usage of existing features of the chatbot especially during high traffic periods.",
       },
       {
-        imgSrc: "/ninja_flexi.png",
+        imgSrc: "/project_faces/ninja_flexi.png",
         altText: "Ninja Flexi SS",
         bgColor: colors.ninja_red,
         textColor: colors.text_white,
