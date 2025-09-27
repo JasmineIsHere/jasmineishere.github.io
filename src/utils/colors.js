@@ -11,6 +11,7 @@ export const colors = {
   go_turq: "#7CEBFF",
   react_mint: "#A4FBF1",
   mysql_blue: "#6DBDFF",
+  aws_orange: "#FF9900",
   others_pink: "#FF9A9A",
   ninja_red: "#ee464a",
 };

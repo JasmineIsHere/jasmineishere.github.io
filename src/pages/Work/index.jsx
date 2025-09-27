@@ -60,6 +60,16 @@ const Work = () => {
         </TechStackPopover>
       ),
     },
+    "AWS Cloud": {
+      backgroundColor: colors.aws_orange,
+      hoverText: (
+        <TechStackPopover>
+          I have experience working with AWS services such as ECS, S3,
+          Lambda, Step Functions, CloudWatch, etc to deploy and monitor
+          applications in the cloud.
+        </TechStackPopover>
+      ),
+    },
     Others: {
       backgroundColor: colors.others_pink,
       hoverText: (
