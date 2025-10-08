@@ -86,6 +86,14 @@ const Work = () => {
   const projects = {
     Personal: [
       {
+        imgSrc: "/project_faces/cheater-meme.jpg",
+        altText: "The Dating Cheatlist",
+        bgColor: colors.btn_bg_grey,
+        textColor: colors.text_black,
+        text: "A place for the broken-hearted to find comfort and advice",
+        onClick: () => onProjectClick("https://jasmineishere.github.io/the-dating-cheatsheet/", true),
+      },
+      {
         imgSrc: "/project_faces/ditto.png",
         altText: "Pokemon Style Portfolio SS",
         bgColor: colors.btn_bg_grey,
