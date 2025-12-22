@@ -85,13 +85,21 @@ const Work = () => {
 
   const projects = {
     Personal: [
+      // {
+      //   imgSrc: "/project_faces/cheater-meme.jpg",
+      //   altText: "The Dating Cheatlist",
+      //   bgColor: colors.btn_bg_grey,
+      //   textColor: colors.text_black,
+      //   text: "A place for the broken-hearted to find comfort and advice",
+      //   onClick: () => onProjectClick("https://jasmineishere.github.io/the-dating-cheatsheet/", true),
+      // },
       {
-        imgSrc: "/project_faces/cheater-meme.jpg",
-        altText: "The Dating Cheatlist",
+        imgSrc: "/project_faces/is_it_wkend_yet.png",
+        altText: "Is it weekend yet",
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
-        text: "A place for the broken-hearted to find comfort and advice",
-        onClick: () => onProjectClick("https://jasmineishere.github.io/the-dating-cheatsheet/", true),
+        text: "A simple web page that tells you if it's the weekend yet",
+        onClick: () => onProjectClick("https://jasmineishere.github.io/is-it-weekend-yet/", true),
       },
       {
         imgSrc: "/project_faces/ditto.png",
