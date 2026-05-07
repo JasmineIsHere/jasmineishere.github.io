@@ -129,8 +129,8 @@ export const ProjectCard = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  width: 30rem;
-  height: 30rem;
+  width: 25rem;
+  height: 25rem;
   perspective: 1000px;
 
   &:hover ${ProjectCard} {
