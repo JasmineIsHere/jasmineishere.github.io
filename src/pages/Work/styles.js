@@ -115,17 +115,6 @@ export const ProjectCardsContainer = styled.div`
   }
 `;
 
-export const CardContainer = styled.div`
-  width: 30rem;
-  height: 30rem;
-  perspective: 1000px;
-
-  @media (max-width: 768px) {
-    width: 15rem;
-    height: 15rem;
-  }
-`;
-
 export const ProjectCard = styled.div`
   width: 100%;
   height: 100%;
@@ -134,13 +123,24 @@ export const ProjectCard = styled.div`
   transition: transform 0.3s;
   will-change: transform;
 
-  &:hover {
+  div {
+    box-shadow: ${(props) => props.$mode === "light" ? "0 0 20px 0 rgba(0, 0, 0, 0.5)" : "0 0 10px 0 rgba(255, 255, 255, 0.5)"};
+  }
+`;
+
+export const CardContainer = styled.div`
+  width: 30rem;
+  height: 30rem;
+  perspective: 1000px;
+
+  &:hover ${ProjectCard} {
     cursor: pointer;
     transform: rotateY(180deg);
   }
 
-  div {
-    box-shadow: ${(props) => props.$mode === "light" ? "0 0 20px 0 rgba(0, 0, 0, 0.5)" : "0 0 10px 0 rgba(255, 255, 255, 0.5)"};
+  @media (max-width: 768px) {
+    width: 15rem;
+    height: 15rem;
   }
 `;
 

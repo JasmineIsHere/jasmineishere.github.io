@@ -85,6 +85,15 @@ const Work = () => {
 
   const projects = {
     Personal: [
+      // TODO: add new projects here!
+      {
+        imgSrc: "/project_faces/Maxout100.png",
+        altText: "Maxout 100",
+        bgColor: colors.btn_bg_grey,
+        textColor: colors.text_black,
+        text: "A game where the goal is to hit 100 or as close as possible without being eliminated",
+        onClick: () => onProjectClick("https://jasmineishere.github.io/maxout100/", true),
+      },
       // {
       //   imgSrc: "/project_faces/cheater-meme.jpg",
       //   altText: "The Dating Cheatlist",
