@@ -21,7 +21,7 @@ export const Picture = styled.img`
   object-fit: contain;
   max-width: 40%;
   @media (max-width: 768px) {
-    display: none;
+    max-width: 100%;
   }
 `;
 
