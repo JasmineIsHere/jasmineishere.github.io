@@ -104,7 +104,6 @@ export default function TgifProject() {
             The repository includes installation instructions and the source code.
           </BodyText>
           <Actions>
-            <Action as="a" href="https://github.com/JasmineIsHere/tgif-screensaver/releases/tag/v1.0.0" target="_blank" rel="noreferrer">Get the screensaver</Action>
             <Action as="a" href="https://github.com/JasmineIsHere/tgif-screensaver" target="_blank" rel="noreferrer">View on GitHub</Action>
           </Actions>
         </section>
