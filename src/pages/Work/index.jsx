@@ -1,3 +1,4 @@
+import ProjectPreviewCard from "../../components/ProjectPreviewCard";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import { colors } from "../../utils/colors";
@@ -206,6 +207,14 @@ const Work = () => {
           <>
             <SubHeading>{projectType}</SubHeading>
             <ProjectCardsContainer>
+              {projectType === "Personal" && (
+                <ProjectPreviewCard
+                  title="TGIF Screensaver"
+                  image="/projects/tgif/work-week.png"
+                  description="A macOS screensaver that counts down to Friday, then makes every second of the weekend count"
+                  to="/projects/tgif-screensaver"
+                />
+              )}
               {projects[projectType].map((project) => (
                 <CardContainer>
                   <ProjectCard>
