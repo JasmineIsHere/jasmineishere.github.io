@@ -1,3 +1,4 @@
+import TgifProject from "../pages/TgifProject";
 import React, { useEffect } from "react";
 import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import About from "../pages/About";
@@ -27,6 +28,7 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/projects/pkCard" element={<PokemonProject />} />
         <Route path="/projects/shiggy" element={<ShiggyProject />} />
+        <Route path="/projects/tgif-screensaver" element={<TgifProject />} />
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </HashRouter>
