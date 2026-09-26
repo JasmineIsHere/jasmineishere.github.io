@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jasmine Portfolio Project"
+  short_description: "Add portfolio projects with preview and approval"
+  default_prompt: "Use $jasmine-portfolio-project to add this project to my portfolio: <project URL>."
