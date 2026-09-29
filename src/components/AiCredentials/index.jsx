@@ -22,25 +22,31 @@ const Section = styled.section`
   }
 `;
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 290px));
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 90%;
   margin-top: 1rem;
-  @media (max-width: 1100px) {
-    grid-template-columns: repeat(2, minmax(0, 290px));
-  }
   @media (max-width: 768px) {
-    grid-template-columns: minmax(0, 360px);
+    width: 100%;
     justify-content: center;
   }
 `;
 const Card = styled.article`
   border: 1px solid currentColor;
   border-color: color-mix(in srgb, currentColor 25%, transparent);
-  border-radius: 18px;
-  padding: 10px;
+  box-sizing: border-box;
+  width: 25rem;
+  max-width: 100%;
+  border-radius: 20px;
+  padding: 1rem;
   font-family: "Open Sans", sans-serif;
   min-width: 0;
+  @media (max-width: 768px) {
+    width: 360px;
+    border-radius: 18px;
+    padding: 10px;
+  }
 `;
 const Badge = styled.img`
   display: block;
@@ -51,12 +57,12 @@ const Badge = styled.img`
 const Details = styled.div`
   margin: 12px 0;
   h3 {
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0 0 6px;
   }
   p {
-    font-size: 14px;
+    font-size: 1.5rem;
     margin: 4px 0;
   }
   @media (max-width: 768px) {
@@ -72,7 +78,7 @@ const Link = styled.a`
   border-radius: 10px;
   background: ${colors.btn_bg_grey};
   color: ${colors.text_black};
-  font-size: 14px;
+  font-size: 1.5rem;
   text-decoration: none;
   &:hover {
     background: ${colors.btn_bg_grey_hover};
@@ -84,6 +90,7 @@ const Link = styled.a`
   }
   @media (max-width: 768px) {
     display: flex;
+    font-size: 14px;
     margin-top: 10px;
   }
 `;
