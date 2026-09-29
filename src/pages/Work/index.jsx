@@ -1,3 +1,4 @@
+import AiCredentials from "../../components/AiCredentials";
 import ProjectPreviewCard from "../../components/ProjectPreviewCard";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -65,9 +66,9 @@ const Work = () => {
       backgroundColor: colors.aws_orange,
       hoverText: (
         <TechStackPopover>
-          I have experience working with AWS services such as ECS, S3,
-          Lambda, Step Functions, CloudWatch, etc to deploy and monitor
-          applications in the cloud.
+          I have experience working with AWS services such as ECS, S3, Lambda,
+          Step Functions, CloudWatch, etc to deploy and monitor applications in
+          the cloud.
         </TechStackPopover>
       ),
     },
@@ -93,7 +94,8 @@ const Work = () => {
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
         text: "A game where the goal is to hit 100 or as close as possible without being eliminated",
-        onClick: () => onProjectClick("https://jasmineishere.github.io/maxout100/", true),
+        onClick: () =>
+          onProjectClick("https://jasmineishere.github.io/maxout100/", true),
       },
       // {
       //   imgSrc: "/project_faces/cheater-meme.jpg",
@@ -109,7 +111,11 @@ const Work = () => {
         bgColor: colors.btn_bg_grey,
         textColor: colors.text_black,
         text: "A simple web page that tells you if it's the weekend yet",
-        onClick: () => onProjectClick("https://jasmineishere.github.io/is-it-weekend-yet/", true),
+        onClick: () =>
+          onProjectClick(
+            "https://jasmineishere.github.io/is-it-weekend-yet/",
+            true,
+          ),
       },
       {
         imgSrc: "/project_faces/ditto.png",
@@ -128,7 +134,7 @@ const Work = () => {
         onClick: () =>
           onProjectClick(
             "https://github.com/JasmineIsHere/yt-downloader",
-            true
+            true,
           ),
       },
       {
@@ -201,6 +207,7 @@ const Work = () => {
           ))}
         </TechStackContainer>
       </SectionContainer>
+      <AiCredentials />
       <SectionContainer>
         <HeadingText>Projects</HeadingText>
         {Object.keys(projects).map((projectType) => (
