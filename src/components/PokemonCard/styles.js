@@ -225,6 +225,10 @@ export const AbilityTextArea = styled.div`
 `;
 
 export const StyledType = styled.div`
+  & + & {
+    margin-left: 4px;
+  }
+
   background-color: ${(props) => props.$backgroundColor || "#f9fbf9"};
   border-radius: 3px;
   font-size: 0.7em;
