@@ -85,7 +85,7 @@ const PokemonCard = () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-  
+
   useEffect(() => {
     if (currPaginationTab === 1) {
       setLeftPaginationTabs(["DEVELOPER INFO"]);
@@ -118,8 +118,8 @@ const PokemonCard = () => {
               </Level>
               <ProfileIconContainer>
                 <ProfileIcon
-                  src="/gennair.png"
-                  alt="https://japeal.com/pkm?efc=cDE9OTRAcDI9MTQ4QHNzPTBAYzE9cmdiKDE0OCwxMTUsMTgwKUBjMj1yZ2IoMjIyLDIxMywyMjIpQGMzPXJnYig2NSw5MCwyNTUpQGM0PXJnYigwLDAsMClAYzU9cmdiKDAsMCwwKQ=="
+                  src="/images/jasmuse.png"
+                  alt="Jasmuse, a custom jasmine-inspired Pokémon"
                 />
               </ProfileIconContainer>
             </LeftProfileContainer>
@@ -130,7 +130,8 @@ const PokemonCard = () => {
                   <LabelText>TYPE</LabelText>
                 </Label>
                 <TextField tabIndex="1">
-                  <StyledType $backgroundColor="#7f68e6">DRAGON</StyledType>
+                  <StyledType $backgroundColor="#538d3e">GRASS</StyledType>
+                  <StyledType $backgroundColor="#b94c85">FAIRY</StyledType>
                 </TextField>
               </TextFieldContainer>
               <InfoRow label="MBTI" value="INFP" />
@@ -165,8 +166,8 @@ const PokemonCard = () => {
               </Level>
               <ProfileIconContainer>
                 <ProfileIcon
-                  src="/gennair.png"
-                  alt="https://japeal.com/pkm?efc=cDE9OTRAcDI9MTQ4QHNzPTBAYzE9cmdiKDE0OCwxMTUsMTgwKUBjMj1yZ2IoMjIyLDIxMywyMjIpQGMzPXJnYig2NSw5MCwyNTUpQGM0PXJnYigwLDAsMClAYzU9cmdiKDAsMCwwKQ=="
+                  src="/images/jasmuse.png"
+                  alt="Jasmuse, a custom jasmine-inspired Pokémon"
                 />
               </ProfileIconContainer>
             </LeftProfileContainer>
@@ -215,8 +216,8 @@ const PokemonCard = () => {
               </Level>
               <ProfileIconContainer>
                 <ProfileIcon
-                  src="/gennair.png"
-                  alt="https://japeal.com/pkm?efc=cDE9OTRAcDI9MTQ4QHNzPTBAYzE9cmdiKDE0OCwxMTUsMTgwKUBjMj1yZ2IoMjIyLDIxMywyMjIpQGMzPXJnYig2NSw5MCwyNTUpQGM0PXJnYigwLDAsMClAYzU9cmdiKDAsMCwwKQ=="
+                  src="/images/jasmuse.png"
+                  alt="Jasmuse, a custom jasmine-inspired Pokémon"
                 />
               </ProfileIconContainer>
             </LeftProfileContainer>
