@@ -50,8 +50,8 @@ export const PaginationDot = styled.div`
     props.position === 0
       ? "#f9fbf9"
       : props.position > 0
-      ? "#004994"
-      : "#c6be73"};
+        ? "#004994"
+        : "#c6be73"};
   border-radius: 30%;
   margin: 10px;
   height: 25px;
@@ -60,6 +60,7 @@ export const PaginationDot = styled.div`
 `;
 
 export const CardContainer = styled.div`
+  min-height: 434px;
   display: flex;
   flex-direction: column;
   border: 2px solid #636b7e;
@@ -69,13 +70,14 @@ export const CardContainer = styled.div`
     props.tabIndex === 1
       ? "repeating-linear-gradient(0deg, #fef1d7, #fed9af 1px, #ffae93 2px, #fdac90)"
       : props.tabIndex === 2
-      ? "repeating-linear-gradient(0deg, #ffed84, #ffe872 1.5px, #ffdf65 1px, #ffdd62)"
-      : "repeating-linear-gradient(0deg, #dfc4fa, #dfc4fa 1.5px, #c09ce1 1px, #cdadee)"};
+        ? "repeating-linear-gradient(0deg, #ffed84, #ffe872 1.5px, #ffdf65 1px, #ffdd62)"
+        : "repeating-linear-gradient(0deg, #dfc4fa, #dfc4fa 1.5px, #c09ce1 1px, #cdadee)"};
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
 `;
 
 export const HorizontalContainer = styled.div`
   display: flex;
+  flex-grow: 1;
 `;
 
 export const LeftProfileContainer = styled.div`
@@ -149,15 +151,24 @@ export const Label = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1;
-  box-shadow: -4px 0 0 -2px #7b8493, -8px 0 0 -4px #7b8493, 4px 0 0 -2px #7b8493,
+  box-shadow:
+    -4px 0 0 -2px #7b8493,
+    -8px 0 0 -4px #7b8493,
+    4px 0 0 -2px #7b8493,
     8px 0 0 -4px #7b8493;
 `;
 
 export const LabelText = styled.div`
   color: #ffffff;
-  text-shadow: -1px -1px 0px #7b8493, 0px -1px 0px #7b8493, 1px -1px 0px #7b8493,
-    -1px 1px 0px #7b8493, 0px 1px 0px #7b8493, 1px 1px 0px #7b8493,
-    -1px 0px 0px #7b8493, 1px 0px 0px #7b8493;
+  text-shadow:
+    -1px -1px 0px #7b8493,
+    0px -1px 0px #7b8493,
+    1px -1px 0px #7b8493,
+    -1px 1px 0px #7b8493,
+    0px 1px 0px #7b8493,
+    1px 1px 0px #7b8493,
+    -1px 0px 0px #7b8493,
+    1px 0px 0px #7b8493;
   padding: 0px 15px 2px 15px;
 `;
 
@@ -172,7 +183,10 @@ export const TextField = styled.div`
   padding: 0px 20px;
   left: -5px;
   position: relative;
-  box-shadow: -4px 0 0 -2px #fff6ef, -8px 0 0 -4px #fff6ef, 4px 0 0 -2px #fff6ef,
+  box-shadow:
+    -4px 0 0 -2px #fff6ef,
+    -8px 0 0 -4px #fff6ef,
+    4px 0 0 -2px #fff6ef,
     8px 0 0 -4px #fff6ef;
 `;
 
@@ -182,7 +196,10 @@ export const SkillTextFieldContainer = styled(TextFieldContainer)`
 
 export const SkillTextField = styled(TextField)`
   background-color: #ffffde;
-  box-shadow: -4px 0 0 -2px #ffffde, -8px 0 0 -4px #ffffde, 4px 0 0 -2px #ffffde,
+  box-shadow:
+    -4px 0 0 -2px #ffffde,
+    -8px 0 0 -4px #ffffde,
+    4px 0 0 -2px #ffffde,
     8px 0 0 -4px #ffffde;
   width: 80px;
   left: 0;
@@ -196,7 +213,10 @@ export const AbilityTextFieldContainer = styled(TextFieldContainer)`
 
 export const AbilityTextField = styled(TextField)`
   background-color: #ffffde;
-  box-shadow: -4px 0 0 -2px #ffffde, -8px 0 0 -4px #ffffde, 4px 0 0 -2px #ffffde,
+  box-shadow:
+    -4px 0 0 -2px #ffffde,
+    -8px 0 0 -4px #ffffde,
+    4px 0 0 -2px #ffffde,
     8px 0 0 -4px #ffffde;
 `;
 
@@ -205,6 +225,10 @@ export const AbilityTextArea = styled.div`
 `;
 
 export const StyledType = styled.div`
+  & + & {
+    margin-left: 4px;
+  }
+
   background-color: ${(props) => props.$backgroundColor || "#f9fbf9"};
   border-radius: 3px;
   font-size: 0.7em;
@@ -225,8 +249,8 @@ export const TextArea = styled.div`
     props.tabIndex === "1"
       ? "#fff6ef"
       : props.tabIndex === "2"
-      ? "#ffffa5"
-      : "#f7ffff"};
+        ? "#ffffa5"
+        : "#f7ffff"};
   border-radius: 3px;
   color: #3a3939;
   display: flex;
@@ -234,16 +258,20 @@ export const TextArea = styled.div`
   padding: 5px 10px 0;
   position: relative;
   top: -0px;
-  box-shadow: -4px 0 0 -2px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
+  box-shadow:
+    -4px 0 0 -2px
+      ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
     -8px 0 0 -4px
       ${(props) =>
         props.tabIndex === "1"
           ? "#fff6ef"
           : props.tabIndex === "2"
-          ? "#ffffa5"
-          : "#f7ffff"},
-    4px 0 0 -2px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
-    8px 0 0 -4px ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")};
+            ? "#ffffa5"
+            : "#f7ffff"},
+    4px 0 0 -2px
+      ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")},
+    8px 0 0 -4px
+      ${(props) => (props.tabIndex === "1" ? "#fff6ef" : props.tabIndex === "2" ? "#ffffa5" : "#f7ffff")};
   line-height: 0.8em;
 `;
 
@@ -264,7 +292,6 @@ export const RightContainer = styled.div`
     #a0f1d8 1px,
     #a1f2d9
   );
-  height: 414px;
 `;
 
 export const MovesContainer = styled.div`
