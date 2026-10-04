@@ -130,8 +130,8 @@ const PokemonCard = () => {
                   <LabelText>TYPE</LabelText>
                 </Label>
                 <TextField tabIndex="1">
-                  <StyledType $backgroundColor="#538d3e">GRASS</StyledType>
-                  <StyledType $backgroundColor="#ee99ac">FAIRY</StyledType>
+                  <StyledType $backgroundColor="#6bb863">GRASS</StyledType>
+                  <StyledType $backgroundColor="#eb92e9">FAIRY</StyledType>
                 </TextField>
               </TextFieldContainer>
               <InfoRow label="MBTI" value="INFP" />
