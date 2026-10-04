@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   ButtonsContainer,
   Container,
@@ -31,12 +32,14 @@ const Navigation = ({ children }) => {
     <Container>
       <NavigationContainer $mode={theme}>
         <NameHeader>
-          Jasmine
-          <br />
-          Tan
+          <Link to="/" aria-label="Jasmine Tan — home">
+            Jasmine
+            <br />
+            Tan
+          </Link>
         </NameHeader>
         <PrimaryButton>
-          <NavigationLink href="/#">Work</NavigationLink>
+          <NavigationLink href="/#/work">Work</NavigationLink>
         </PrimaryButton>
         <PrimaryButton>
           <NavigationLink href="/#/about">About</NavigationLink>
@@ -69,10 +72,14 @@ const Navigation = ({ children }) => {
       <MobileNavigationContainer $mode={theme}>
         <MobileNavigationBar>
           <MenuIcon onClick={toggleMenu} />
-          <NameHeader>Jasmine Tan</NameHeader>
+          <NameHeader>
+            <Link to="/" aria-label="Jasmine Tan — home" onClick={closeMenu}>
+              Jasmine Tan
+            </Link>
+          </NameHeader>
         </MobileNavigationBar>
         <MobileNavigationMenu $mode={theme} $isMenuOpen={isMenuOpen}>
-          <NavigationLink $mode={theme} href="/" onClick={closeMenu}>
+          <NavigationLink $mode={theme} href="/#/work" onClick={closeMenu}>
             Work
           </NavigationLink>
           <NavigationLink $mode={theme} href="/#/about" onClick={closeMenu}>
