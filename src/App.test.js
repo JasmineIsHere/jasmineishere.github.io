@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Router from "./Router";
 import { ThemeProvider } from "./contexts/ThemeContext";
 beforeEach(() => {
+  window.history.replaceState(null, "", "/?variant=sky");
   window.scrollTo = jest.fn();
   window.matchMedia = () => ({ matches: false });
 });
@@ -59,4 +60,17 @@ test("Ninja Van displays its projects without linking to the old work page", () 
   expect(panel).toHaveTextContent("NinjaChat");
   expect(panel).toHaveTextContent("Ninja Flexi");
   expect(panel.querySelector('a[href="#/work"]')).toBeNull();
+});
+
+test("the old override displays the original portfolio", () => {
+  window.history.replaceState(null, "", "/?variant=old");
+  render(
+    <ThemeProvider>
+      <Router />
+    </ThemeProvider>,
+  );
+  expect(screen.getByText("Tech Stack")).toBeInTheDocument();
+  expect(
+    screen.queryByRole("button", { name: "Explore TGIF Screensaver" }),
+  ).not.toBeInTheDocument();
 });

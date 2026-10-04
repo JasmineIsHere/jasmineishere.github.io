@@ -39,10 +39,14 @@ const Navigation = ({ children }) => {
           </Link>
         </NameHeader>
         <PrimaryButton>
-          <NavigationLink href="/#/work">Work</NavigationLink>
+          <NavigationLink as={Link} to="/work">
+            Work
+          </NavigationLink>
         </PrimaryButton>
         <PrimaryButton>
-          <NavigationLink href="/#/about">About</NavigationLink>
+          <NavigationLink as={Link} to="/about">
+            About
+          </NavigationLink>
         </PrimaryButton>
         <ButtonsContainer>
           <IconButton>
@@ -79,10 +83,20 @@ const Navigation = ({ children }) => {
           </NameHeader>
         </MobileNavigationBar>
         <MobileNavigationMenu $mode={theme} $isMenuOpen={isMenuOpen}>
-          <NavigationLink $mode={theme} href="/#/work" onClick={closeMenu}>
+          <NavigationLink
+            $mode={theme}
+            as={Link}
+            to="/work"
+            onClick={closeMenu}
+          >
             Work
           </NavigationLink>
-          <NavigationLink $mode={theme} href="/#/about" onClick={closeMenu}>
+          <NavigationLink
+            $mode={theme}
+            as={Link}
+            to="/about"
+            onClick={closeMenu}
+          >
             About
           </NavigationLink>
           <ButtonsContainer>
