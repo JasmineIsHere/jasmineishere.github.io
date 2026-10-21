@@ -17,14 +17,6 @@ export const ChillContainer = styled.div`
   }
 `;
 
-export const Picture = styled.img`
-  object-fit: contain;
-  max-width: 40%;
-  @media (max-width: 768px) {
-    max-width: 100%;
-  }
-`;
-
 export const StyledText = styled.span`
   color: ${(props) => props.$color || "inherit"};
   font-weight: ${(props) => (props.$bold ? "bold" : "normal")};
@@ -65,7 +57,6 @@ export const StyledTimeline = styled(Timeline)`
     background-color: ${(props) => props.$color || "inherit"};
     inset-block-start: 1.5rem;
   }
-
 `;
 
 export const TimelineHeadingText = styled.h2`
@@ -83,5 +74,18 @@ export const TimelineBodyText = styled.p`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+  }
+`;
+
+export const ArtworkFooter = styled.footer`
+  margin: 3rem 0 0;
+  padding: 0;
+  width: 100%;
+  contain: inline-size;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 `;
