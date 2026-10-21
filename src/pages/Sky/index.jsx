@@ -5,6 +5,7 @@ import {
   ArrowRightOutlined,
 } from "@ant-design/icons";
 import "./sky.css";
+import CertificationBadges from "../../components/CertificationBadges";
 
 const profile = {
   id: "about",
@@ -298,6 +299,12 @@ export default function Sky() {
                   cloud deployments. I've also worked with Kafka, Redis,
                   Mixpanel, and Bamboo.
                 </p>
+              </section>
+            )}
+            {selected.id === "about" && (
+              <section className="sky-toolkit">
+                <h3>Certifications</h3>
+                <CertificationBadges />
               </section>
             )}
             {selected.projects && (

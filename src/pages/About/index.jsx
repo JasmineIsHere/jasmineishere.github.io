@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CertificationBadges from "../../components/CertificationBadges";
 import {
   SectionContainer,
   ChillContainer,
@@ -6,7 +7,7 @@ import {
   TimelineHeadingText,
   StyledTimeline,
   TimelineBodyText,
-  Picture,
+  ArtworkFooter,
 } from "./styles";
 import HeadingText from "../../components/HeadingText";
 import BodyText from "../../components/BodyText";
@@ -21,7 +22,6 @@ import { Tooltip } from "antd";
 
 const About = () => {
   const [showVideo, setShowVideo] = useState(false);
-
   const showVideoOnHover = () => {
     setShowVideo(true);
   };
@@ -29,6 +29,7 @@ const About = () => {
     setShowVideo(false);
   };
   return (
+    <>
       <ChillContainer>
         <SectionContainer onMouseLeave={pauseVideo}>
           <HeadingText>About Me</HeadingText>
@@ -161,19 +162,13 @@ const About = () => {
         </SectionContainer>
         <SectionContainer>
           <HeadingText>Other Certifications</HeadingText>
-          <a
-            href="https://www.credly.com/badges/18c4617e-19c6-4670-9669-e35f9779a68d"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Picture
-              src="/aws_cloud_practitioner.png"
-              alt="aws cloud practitioner badge"
-            />
-          </a>
+          <CertificationBadges />
         </SectionContainer>
       </ChillContainer>
-    
+      <ArtworkFooter>
+        <img src="/footer.png" alt="" width="3664" height="400" />
+      </ArtworkFooter>
+    </>
   );
 };
 

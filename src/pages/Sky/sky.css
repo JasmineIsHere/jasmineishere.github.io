@@ -418,3 +418,10 @@
     display: none;
   }
 }
+
+.sky-dialog .certification-badges img {
+  width: 105px;
+  height: 105px;
+  background: transparent;
+  border-radius: 0;
+}
