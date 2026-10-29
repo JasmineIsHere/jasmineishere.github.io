@@ -63,31 +63,6 @@ const About = () => {
           )}
         </SectionContainer>
         <SectionContainer>
-          <HeadingText>Personality</HeadingText>
-          <BodyText>
-            As a INFP, I have the Introverted, Intuitive, Feeling,
-            and Prospecting traits. I am more of a listener than a speaker
-            because I find it more interesting to hear people’s thoughts and
-            stories. I am more of a explorer than a settler because the world is
-            filled with so many interesting things that it seems like a pity to
-            focus on only one thing for life. I am more empathetic than logical
-            because people matter more to me than facts. <br />
-            As a colleague, I enjoy the ability to engage in discussions to
-            solve a problem when in a team setting but I am also independent
-            enough to rely on my own resourcefulness to overcome any challenges
-            I face.
-          </BodyText>
-          <PrimaryButton>
-            <a
-              href="https://www.16personalities.com/infps-at-work"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Learn More
-            </a>
-          </PrimaryButton>
-        </SectionContainer>
-        <SectionContainer>
           <HeadingText>Education</HeadingText>
           <StyledTimeline
             $lineColor={colors.btn_bg_grey}

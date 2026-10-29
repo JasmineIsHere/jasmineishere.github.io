@@ -134,7 +134,6 @@ const PokemonCard = () => {
                   <StyledType $backgroundColor="#eb92e9">FAIRY</StyledType>
                 </TextField>
               </TextFieldContainer>
-              <InfoRow label="MBTI" value="INFP" />
               <InfoRow label="SIGN" value="VIRGO" />
               <InfoRow label="NATL" value="S'PORE" />
             </RowsContainer>
